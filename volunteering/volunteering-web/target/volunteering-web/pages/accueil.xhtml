@@ -1,0 +1,89 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+
+
+	<ui:define name="pageContent">
+		<section id="home">
+	 <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+
+ <script type="text/javascript">
+
+ var markers = [];
+ var geocoder = new google.maps.Geocoder();
+
+ function geocodePosition(pos) {
+ geocoder.geocode({
+ latLng: pos
+ }, function(responses) {
+ if (responses &amp;&amp; responses.length > 0) {
+ updateMarkerAddress(responses[0].formatted_address);
+ } else {
+ updateMarkerAddress('Cannot determine address at this location.');
+ }
+ });
+ }
+
+ function updateMarkerStatus(str) {
+ document.getElementById('markerStatus').innerHTML = str;
+ }
+
+ function updateMarkerPosition(latLng) {
+ document.getElementById('info').innerHTML = [
+ latLng.lat(),
+ latLng.lng()
+ ].join(', ');
+ }
+
+   function updateMarkerAddress(str) {
+   document.getElementById('address').innerHTML = str;
+   }
+
+   function initialize() {
+	   for (var i = 0; i  markers.length; i++) {
+			var tableauMarqueurs = [
+			    					{ lat:47.325371, lng:1.044195 },
+			    					{ lat:47.345627, lng:0.894806 },
+			    					{ lat:47.334488, lng:0.944717 },
+			    					{ lat:47.331615, lng:1.129307 },
+			    					{ lat:47.270981, lng:1.375158 },
+			    					{ lat:47.290585, lng:1.346169 },
+			    					{ lat:47.330112, lng:0.995293 },
+			    					{ lat:47.339272, lng:1.175795 },
+			    					{ lat:47.307144, lng:1.318617 },
+			    					{ lat:47.328671, lng:1.288072 },
+			    					{ lat:47.344994, lng:1.212090 },
+			    					{ lat:47.357315, lng:0.831850 },
+			    					{ lat:47.342327,lng: 1.245060 }
+			    				];
+   var latLng = new google.maps.LatLng(tableauMarqueurs.lat, tableauMarqueurs.lng);
+   
+   var map = new google.maps.Map(document.getElementById('map'), {
+   zoom: 10,
+   center: latLng,
+   mapTypeId: google.maps.MapTypeId.ROADMAP
+   });
+
+  
+   var marker = new google.maps.Marker({
+     position: latLng,
+     map: map
+   });
+   markers.push(marker);
+	   }
+
+   }
+
+ 
+
+</script> 
+		
+			<script async = "async" defer = "defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVMR3Aj2yj28EEo67n-MrNJWW76yn72rE&amp;callback=initialize">
+		    </script>
+			  
+		</section>
+	</ui:define>
+</ui:composition>

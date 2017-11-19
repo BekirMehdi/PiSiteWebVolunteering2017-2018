@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputText value="name" />
+			<h:inputText value="#{eventBean.event.nameEvent}" />
+			<h:outputText value="type" />
+			<h:inputText value="#{eventBean.event.typeEvent}" />
+
+			<h:panelGrid columns="2">
+				<h:commandButton value="save" action="#{eventBean.doSave()}" />
+			</h:panelGrid>
+		</h:panelGrid>
+	</h:form>
+
+</ui:composition>

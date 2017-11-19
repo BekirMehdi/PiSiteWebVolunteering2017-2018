@@ -1,0 +1,71 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/templateBackOffice.xhtml">
+
+	<ui:define name=""></ui:define>
+	<ui:define name="pageContent">
+
+		<section class="divider">
+			<div class="container pt-0">
+				<ol class="breadcrumb text-center text-black mt-10">
+					<h:form>
+						<li><h:commandLink value="Home"
+								styleClass="btn btn-dark btn-theme-colored btn-sm mt-10"
+								action="#{eventBean.doCancel()}" /></li>
+					</h:form>
+				</ol>
+				<h:form>
+
+					<div data-example-id="striped-table" class="bs-example">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Name</th>
+									<th>Type</th>
+									<th>date</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<ui:repeat value="#{eventBean.listEvents}" var="e">
+									<tr>
+										<th scope="row">#{e.idEvent}</th>
+										<td>#{e.nameEvent}</td>
+										<td>#{e.typeEvent}</td>
+										<td>@#{e.dateEvent}</td>
+										<td><h:commandLink
+												styleClass="glyphicon glyphicon-eye-open"
+												action="#{eventBean.showAction(e)}" /> <h:commandLink
+												styleClass="glyphicon glyphicon-edit"
+												action="#{eventBean.editAction(e)}" /> <h:commandLink
+												styleClass="glyphicon glyphicon-trash"
+												action="#{eventBean.deleteAction(e)}" 
+												onclick="if (!confirm('Are you sure you want to delete the current record?')) 
+        												return false"
+												/></td>
+									</tr>
+								</ui:repeat>
+							</tbody>
+						</table>
+					</div>
+
+				</h:form>
+
+				<div class="mt-10">
+
+					<h:form>
+						<h:commandLink value="New event"
+							styleClass="btn btn-dark btn-theme-colored btn-sm mt-10"
+							action="#{eventBean.createEvent()}" />
+
+					</h:form>
+				</div>
+			</div>
+
+		</section>
+	</ui:define>
+</ui:composition>

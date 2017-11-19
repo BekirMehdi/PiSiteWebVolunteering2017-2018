@@ -1,0 +1,157 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	template="/template/templateBackOffice.xhtml">
+
+	<ui:define name=""></ui:define>
+	<ui:define name="pageContent">
+
+		<div class="main-content">
+
+			<!-- Section: inner-header -->
+			<c:if test="#{eventBean.user.event !=null }">
+				<div role="alert" class="alert alert-success">
+					<strong>Well done!</strong> you participate in this event.
+				</div>
+			</c:if>
+			<c:if test="#{eventBean.user.event ==null}">
+				<section class="bg-theme-colored">
+					<div class="container pt-0 pb-0">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="call-to-action pt-30 pb-30">
+									<div class="col-md-9">
+										<h3 class="text-white">Lets Change the world we all
+											together, join us now</h3>
+									</div>
+									<div class="col-md-3 text-right sm-text-center">
+										<h:form>
+											<h:commandLink value="participate"
+												styleClass="btn btn-transparent btn-border btn-circled btn-lg mt-15"
+												action="#{eventBean.participateAction()}" />
+										</h:form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</c:if>
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<h2>#{eventBean.event.nameEvent}</h2>
+							<div id="map"></div>
+						</div>
+
+						<div class="col-md-4 mt-60">
+							<ul>
+								<li>
+									<h5>Topics:</h5>
+									<p>#{eventBean.event.typeEvent}</p>
+								</li>
+								<li>
+									<h5>Host:</h5>
+									<p>#{eventBean.event.address}.</p>
+								</li>
+								<li>
+									<h5>Location:</h5>
+									<p>#{eventBean.event.address}</p>
+								</li>
+								<li>
+									<h5>Start Date:</h5>
+									<p>#{eventBean.event.dateEvent}</p>
+								</li>
+								<li>
+									<h5>End Date:</h5>
+									<p>#{eventBean.event.dateEvent}</p>
+								</li>
+								<li>
+									<h5>Website:</h5>
+									<p>kodesolution.com</p>
+								</li>
+								<li>
+									<h5>Share:</h5>
+									<div
+										class="styled-icons icon-dark icon-theme-colored icon-sm icon-circled">
+										<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
+											class="fa fa-twitter"></i></a> <a href="#"><i
+											class="fa fa-instagram"></i></a> <a href="#"><i
+											class="fa fa-google-plus"></i></a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row mt-60">
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="text-theme-colored mb-30">volunteers who
+									participate</h3>
+							</div>
+						</div>
+						
+						<div class="row">
+						<c:if test="${empty eventBean.listUsers}">			
+								
+								<div class="alert alert-info">no Users participite in this event !</div>
+							</c:if>
+						
+							<ui:repeat value="#{eventBean.listUsers}" var="u">
+						
+								<div class="col-sm-6 col-md-3 col-lg-3 pb-sm-30">
+									<div class="team-member">
+										<div class="volunteer-thumb">
+											<img src="#{request.contextPath}/resources/images/team/1.jpg"
+												alt="" class="img-fullwidth img-responsive" />
+										</div>
+										<div class="member-info mb-20">
+											<div class="member-biography p-20">
+												<h3 class="text-white mt-0 mb-10">#{u.firstName}</h3>
+												<h5 class="text-white">Student</h5>
+											</div>
+											<div class="social-network bg-white text-center">
+												<ul
+													class="styled-icons icon-hover-theme-colored icon-circled pt-5">
+													<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+													<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+													<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</ui:repeat>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Divider: Call To Action -->
+
+		</div>
+
+		<input type="hidden" id="lng" value="#{eventBean.event.latitude}"
+			name="lng" />
+		<input type="hidden" id="lat" value="#{eventBean.event.longitude}"
+			name="lat" />
+
+		<script async="async" defer="defer"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVMR3Aj2yj28EEo67n-MrNJWW76yn72rE&amp;callback=initialize">
+		    </script>
+<script type="text/javascript" src="#{request.contextPath}/resources/js/mapShow.js">
+				    	
+			        </script>
+		<style>
+#map {
+	height: 400px;
+}
+</style>
+
+
+	</ui:define>
+</ui:composition>
