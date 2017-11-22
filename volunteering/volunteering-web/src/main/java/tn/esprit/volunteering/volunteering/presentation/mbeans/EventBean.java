@@ -6,12 +6,18 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.validator.ValidatorException;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import org.primefaces.event.FileUploadEvent;
 
@@ -20,9 +26,10 @@ import tn.esprit.volunteering.volunteering.persistence.User;
 import tn.esprit.volunteering.volunteering.services.EventServiceLocal;
 import tn.esprit.volunteering.volunteering.services.UserServiceLocal;
 
-
+@Path("Event")
 @ManagedBean
 @SessionScoped
+@RequestScoped
 public class EventBean {
 	@EJB
 	private EventServiceLocal eventServiceLocal;
@@ -54,6 +61,14 @@ public class EventBean {
 		
 		listEvents = eventServiceLocal.findAllEvents();
 	}
+	
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getEvents(){
+		return Response.ok(eventServiceLocal.findAllEvents()).build();
+	}
+	
 	
 	public String doNew() {
 		formDespled=true ;
