@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\DELL-PC\Documents\gitHub\projetVolunteering\volunteering"/>
 			<item value="C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering"/>
 		</list>
 		<list key="projectNameTemplate">

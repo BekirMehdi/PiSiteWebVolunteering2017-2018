@@ -5,6 +5,7 @@
   <project name="volunteering-web"/>
  </used-by-projects>
  <paths>
+  <path value="C:/Users/DELL-PC/Documents/gitHub/volunteering/jackson-annotations-2.8.1.jar"/>
   <path value="C:/Users/DELL-PC/.m2/repository/javax/javaee-api/7.0/javaee-api-7.0.jar"/>
   <path value="C:/Users/DELL-PC/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
   <path value="C:/Users/DELL-PC/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>

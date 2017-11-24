@@ -34,6 +34,9 @@
   <path value="C:/Users/DELL-PC/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
  </paths>
  <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="batch-verification"/>
+  <core validator-id="jboss.jsf.core"/>
   <el>
    <linked-el length="66" name="%0" offset="3303" path="%1"/>
    <linked-el length="57" name="%0" offset="1024" path="%2"/>

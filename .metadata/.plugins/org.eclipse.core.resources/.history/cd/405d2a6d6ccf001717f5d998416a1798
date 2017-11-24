@@ -1,0 +1,79 @@
+package tn.esprit.volunteering.volunteering.presentation.mbeans;
+
+
+
+import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+
+import tn.esprit.volunteering.volunteering.persistence.Event;
+import tn.esprit.volunteering.volunteering.services.EventServiceLocal;
+
+@Path("Event")
+@RequestScoped
+public class EventResourses {
+
+	@EJB
+	private EventServiceLocal eventServiceLocal;
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getEvents(){
+		if (eventServiceLocal.findAllEvents() != null)
+			return Response.status(Status.OK).entity(eventServiceLocal.findAllEvents()).build();
+		return Response.status(Status.NO_CONTENT).build();
+	}
+	
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response CreationRendezVous (Event event) {
+		if (eventServiceLocal.saveEvent(event))
+			return Response.status(Status.CREATED).build();
+		return Response.status(Status.NOT_FOUND).build();
+			
+	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{?refLogement}")
+	public Response GetLogementByReference(@QueryParam("refLogement")int reference) {
+		if (metier.getListeRendezVousByLogementReference(reference) != null)
+			return Response.status(Status.OK).entity(metier.getListeRendezVousByLogementReference(reference)).build();
+		return Response.status(Status.NOT_FOUND).build();
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{refRendezVous}")
+	public Response GetRendezVousById(@PathParam("refRendezVous")int id) {
+		if (metier.getRendezVousById(id) != null)
+			return Response.status(Status.OK).entity(metier.getRendezVousById(id)).build();
+		return Response.status(Status.NOT_FOUND).build();	
+	}
+	
+	@DELETE
+	@Path("{refRendezVous}")
+	public Response DeleteRendezVousById(@PathParam("refRendezVous")int id) {
+		if (metier.deleteRendezVous(id))
+			return Response.status(Status.OK).build();
+		return Response.status(Status.NOT_FOUND).build();	
+	}
+	@PUT
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("{refRendezVous}")
+	public Response UpdateRendezVousById(@PathParam("refRendezVous")int idRendezVous, RendezVous rendezvous) {
+		if (metier.updateRendezVous(idRendezVous, rendezvous))
+			return Response.status(Status.OK).build();
+		return Response.status(Status.NOT_FOUND).build(); 
+			
+	}
+	
+	
+}

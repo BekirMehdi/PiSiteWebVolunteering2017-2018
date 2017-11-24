@@ -10,7 +10,7 @@ import tn.esprit.volunteering.volunteering.persistence.Event;
 public interface EventServiceRemote {
 
 	Event createEvent(Event event);
-	void saveEvent(Event event);
+	boolean saveEvent(Event event);
 	void removeEvent(Event event);
 	List<Event> findAllEvents();
 	Event findEventByName(String name);

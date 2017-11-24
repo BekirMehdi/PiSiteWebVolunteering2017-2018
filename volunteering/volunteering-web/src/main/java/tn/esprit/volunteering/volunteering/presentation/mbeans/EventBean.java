@@ -26,10 +26,10 @@ import tn.esprit.volunteering.volunteering.persistence.User;
 import tn.esprit.volunteering.volunteering.services.EventServiceLocal;
 import tn.esprit.volunteering.volunteering.services.UserServiceLocal;
 
-@Path("Event")
+
 @ManagedBean
 @SessionScoped
-@RequestScoped
+
 public class EventBean {
 	@EJB
 	private EventServiceLocal eventServiceLocal;
@@ -63,12 +63,7 @@ public class EventBean {
 	}
 	
 	
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response getEvents(){
-		return Response.ok(eventServiceLocal.findAllEvents()).build();
-	}
-	
+
 	
 	public String doNew() {
 		formDespled=true ;
