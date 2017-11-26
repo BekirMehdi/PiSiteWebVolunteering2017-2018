@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
@@ -18,11 +19,11 @@ import javax.persistence.OneToMany;
  *
  */
 @Entity
-
+@XmlRootElement
 public class Event implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private int idEvent;
 	private String nameEvent;
 	private String typeEvent;
@@ -33,21 +34,35 @@ public class Event implements Serializable {
 	private String address;
 	private String latitude;
 	private String longitude;
-	private byte[] picture;
-
+	private String imgPath ;
 	private static final long serialVersionUID = 1L;
-
+/*
 	@OneToMany(mappedBy = "event")
-	private List<User> listUsers ;
+	private List<User> listUsers ;*/
 	
 
-	@ManyToOne
+	/*@ManyToOne
 	private Event parent;
 	@OneToMany(mappedBy = "parent")
-	private List<Event> subEvents;
+	private List<Event> subEvents;*/
 
 	public Event() {
 
+	}
+
+	public Event(int idEvent, String nameEvent, String typeEvent, Date dateEvent, String description, String mailResp,
+			int phoneResp, String address, String latitude, String longitude) {
+		super();
+		this.idEvent = idEvent;
+		this.nameEvent = nameEvent;
+		this.typeEvent = typeEvent;
+		this.dateEvent = dateEvent;
+		this.description = description;
+		this.mailResp = mailResp;
+		this.phoneResp = phoneResp;
+		this.address = address;
+		this.latitude = latitude;
+		this.longitude = longitude;
 	}
 
 	public Event(String nameEvent, String typeEvent) {
@@ -87,7 +102,7 @@ public class Event implements Serializable {
 		this.dateEvent = dateEvent;
 	}
 
-	public Event getParent() {
+/*	public Event getParent() {
 		return parent;
 	}
 
@@ -102,16 +117,16 @@ public class Event implements Serializable {
 	public void setSubEvents(List<Event> subEvents) {
 		this.subEvents = subEvents;
 	}
+*/
 
-
-	public List<User> getListUsers() {
+	/*public List<User> getListUsers() {
 		return listUsers;
 	}
 
 	public void setListUsers(List<User> listUsers) {
 		this.listUsers = listUsers;
 	}
-
+*/
 	public String getDescription() {
 		return description;
 	}
@@ -144,13 +159,7 @@ public class Event implements Serializable {
 		this.address = address;
 	}
 
-	public byte[] getPicture() {
-		return picture;
-	}
 
-	public void setPicture(byte[] picture) {
-		this.picture = picture;
-	}
 
 	public String getMailResp() {
 		return mailResp;
@@ -166,6 +175,14 @@ public class Event implements Serializable {
 
 	public void setPhoneResp(int phoneResp) {
 		this.phoneResp = phoneResp;
+	}
+
+	public String getImgPath() {
+		return imgPath;
+	}
+
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
 	}
 
 	

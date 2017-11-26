@@ -19,10 +19,9 @@ public class EventsContent {
   public static ArrayList<Event> getEvents(){
       ArrayList<Event> events = new ArrayList<>();
       for (int i=0 ;i<2;i++){
-          events.add(new Event(names[i],types[i],durations[i],pictures[i]));
-          events.add(new Event(names[i],types[i],durations[i],pictures[i]));
-          events.add(new Event(names[i],types[i],durations[i],pictures[i]));
-          events.add(new Event(names[i],types[i],durations[i],pictures[i]));
+        //  events.add(new Event(names[i],types[i],durations[i],pictures[i]));
+         // events.add(new Event(names[i],types[i],durations[i],pictures[i]));
+
       }
       return events;
   }

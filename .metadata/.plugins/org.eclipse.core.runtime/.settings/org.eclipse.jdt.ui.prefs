@@ -1,4 +1,4 @@
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="tn.esprit.volunteering.volunteering.presentation.mbeans.EventBean"><rhs name\="tn.esprit.volunteering.volunteering.presentation.mbeans.EventBean"/></lhs><lhs name\="java.lang.Enum"><rhs name\="javax.persistence.FetchType"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="tn.esprit.volunteering.volunteering.presentation.mbeans.EventBean"><rhs name\="tn.esprit.volunteering.volunteering.presentation.mbeans.EventBean"/></lhs><lhs name\="java.lang.Enum"><rhs name\="javax.persistence.FetchType"/></lhs><lhs name\="tn.esprit.volunteering.volunteering.persistence.Event"><rhs name\="tn.esprit.volunteering.volunteering.persistence.Event"/></lhs><lhs name\="tn.esprit.volunteering.volunteering.persistence.Todo"><rhs name\="tn.esprit.volunteering.volunteering.persistence.Todo"/></lhs></history>
 content_assist_number_of_computers=21
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0

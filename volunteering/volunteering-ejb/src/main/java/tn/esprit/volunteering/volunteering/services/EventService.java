@@ -37,9 +37,9 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 			em.merge(event); 
 			return true;
 		
-		} catch (RuntimeException re){}
+		} catch (RuntimeException re){
 		return false ;
-		
+		}
 	}
 
 	public Event findEventById(int id) {
@@ -50,6 +50,7 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 		
 		em.remove(em.merge(event));
 	}
+
 
 	public List<Event> findAllEvents() {
 		return em.createQuery("select e from Event e", Event.class)
@@ -103,6 +104,39 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 					Level.WARNING, "no Event registred with name=" + nameEvent);
 		}
 		return exists;
+	}
+
+
+	@Override
+	public boolean removeEvent(int id) {
+		
+			try {
+				em.remove(em.merge(findEventById(id)));
+				return true;
+			
+			} catch (RuntimeException re){}
+			return false ;
+			
+		}
+
+
+	@Override
+	public void saveEven(Event event) {
+		em.merge(event); 
+		
+	}
+
+
+	@Override
+	public boolean updateEvent(int id) {
+		try {
+			
+			em.merge(findEventById(id)); 
+			return true;
+		
+		} catch (RuntimeException re){
+		return false ;
+		}
 	}
 	
 }

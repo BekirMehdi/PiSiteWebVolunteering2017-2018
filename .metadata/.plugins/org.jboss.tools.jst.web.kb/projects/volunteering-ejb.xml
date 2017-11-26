@@ -11,6 +11,8 @@
   <path value="C:/Users/DELL-PC/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
  </paths>
  <validation>
+  <core validator-id="jboss.cdi.core"/>
+  <core validator-id="batch-verification"/>
   <el>
    <linked-el length="21" name="%0" offset="842" path="%1"/>
    <linked-el length="21" name="%2" offset="672" path="%1"/>

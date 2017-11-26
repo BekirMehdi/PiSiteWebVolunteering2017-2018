@@ -22,6 +22,7 @@ import javax.ws.rs.core.Response;
 import org.primefaces.event.FileUploadEvent;
 
 import tn.esprit.volunteering.volunteering.persistence.Event;
+import tn.esprit.volunteering.volunteering.persistence.Todo;
 import tn.esprit.volunteering.volunteering.persistence.User;
 import tn.esprit.volunteering.volunteering.services.EventServiceLocal;
 import tn.esprit.volunteering.volunteering.services.UserServiceLocal;
@@ -45,6 +46,8 @@ public class EventBean {
 	
 	private Event event = new Event();
 	
+	private Todo todo = new Todo();
+	
 	private List<User> listUsers = new ArrayList<User>();
 	
 	private List<Event> listEvents = new ArrayList<Event>();
@@ -55,9 +58,9 @@ public class EventBean {
 	
 	@PostConstruct
 	public void init(){
-		if (user.getEvent()!=null) {
+		/*if (user.getEvent()!=null) {
 			formDisplayed = true;
-		}
+		}*/
 		
 		listEvents = eventServiceLocal.findAllEvents();
 	}
@@ -85,7 +88,7 @@ public class EventBean {
 	}
 	
 	public String doSave(){
-		eventServiceLocal.saveEvent(event);
+		eventServiceLocal.saveEven(event);
 		return "index?faces-redirect=true";
 	}
 	
@@ -95,7 +98,7 @@ public class EventBean {
 		return "edit?faces-redirect=true";
 	}
 	public String participateAction(){
-		user.setEvent(event);
+		//user.setEvent(event);
 		userServiceLocal.saveUser(user);
 		return "showFront?faces-redirect=true";
 	}
@@ -132,10 +135,6 @@ public class EventBean {
 		}
 	}
 	
-	public void handleFileUpload(FileUploadEvent event) {
-		byte[] picture = event.getFile().getContents();
-		e.setPicture(picture);
-	}
 
 	
 	public void onRowSelect() {
