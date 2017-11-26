@@ -9,14 +9,22 @@
     android:paddingBottom="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.dell_pc.volunteering.MainActivity"
-    tools:showIn="@layout/activity_main">
-
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/img1"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over">
+    <Button
+        android:id="@+id/btAjoutEvent"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Add Event" />
     <ListView
         android:id="@+id/lv_event"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="115dp">
+        tools:layout_editor_absoluteY="115dp"
+        android:layout_below="@id/btAjoutEvent">
     </ListView>
 
 </RelativeLayout>

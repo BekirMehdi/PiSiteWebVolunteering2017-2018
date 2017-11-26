@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.dell_pc.volunteering.models.Event;
 import com.example.dell_pc.volunteering.utils.EventsContent;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EventDetailActivity extends AppCompatActivity {
+    public static final String KEY_POSITION = "KeyPosition";
     Context context;
     ImageView imgEvent ;
     TextView tvName,tvType,tvDuration;
@@ -40,19 +42,13 @@ public class EventDetailActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
         final Button button = findViewById(R.id.button_id);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(EventDetailActivity.this, MapsActivity.class);
 
-                startActivity(intent);
-            }
-        });
 
         imgEvent = (ImageView) findViewById(R.id.imgEventBig);
         tvName = (TextView) findViewById(R.id.tv_event_detail_name);
         tvType = (TextView) findViewById(R.id.tv_event_detail_type);
         tvDuration = (TextView) findViewById(R.id.tv_event_detail_duration);
+        imgEvent = (ImageView) findViewById(R.id.imgEventBig);
 
 
 
@@ -81,11 +77,21 @@ public class EventDetailActivity extends AppCompatActivity {
                             Bundle bundle =getIntent().getExtras();
 
                             if (bundle!=null) {
-                                int position = bundle.getInt(MainActivity.KEY_POSITION);
+                                final int position = bundle.getInt(MainActivity.KEY_POSITION);
 
                                 tvName.setText(listEvents.get(position).getNameEvent());
                                 tvType.setText(listEvents.get(position).getType());
                                 tvDuration.setText(listEvents.get(position).getDuration());
+                                Picasso.with(context).load(listEvents.get(position).getImageRes()).centerCrop().resize(200,150).into(imgEvent);
+                                button.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        Intent intent = new Intent(EventDetailActivity.this, MapsDetailsActivity.class);
+                                        intent.putExtra(KEY_POSITION, 1);
+                                        startActivity(intent);
+                                    }
+                                });
+
 
                             }
         }
@@ -99,7 +105,6 @@ public class EventDetailActivity extends AppCompatActivity {
     });
 
         Mysingleton.getmInstance(context).addToREquestQue(jsonArrayRequest);
-
 
 
 

@@ -22,6 +22,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.dell_pc.volunteering.MainActivity;
 import com.example.dell_pc.volunteering.R;
 import com.example.dell_pc.volunteering.models.Event;
 import com.squareup.picasso.Picasso;
@@ -66,7 +67,7 @@ public class EventAdapter extends ArrayAdapter<Event> {
         holder.tvName.setText(getItem(position).getNameEvent());
         holder.tvType.setText(getItem(position).getType());
         holder.tvDuration.setText(getItem(position).getDuration());
-        Picasso.with(context).load(getItem(position).getImageRes()).into(holder.imgEvent);
+        Picasso.with(context).load(getItem(position).getImageRes()).resize(50,50).into(holder.imgEvent);
 
         return view;
     }

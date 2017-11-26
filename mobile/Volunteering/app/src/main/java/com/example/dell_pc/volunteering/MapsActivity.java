@@ -51,10 +51,7 @@ public class MapsActivity extends FragmentActivity implements OnMarkerClickListe
         //private static final LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
 
         private Marker mPerth;
-    private Marker mPerth1;
-    private Marker mPerth2;
-    private Marker mPerth3;
-    private Marker mPerth4;
+
         private GoogleMap mMap;
 
 
