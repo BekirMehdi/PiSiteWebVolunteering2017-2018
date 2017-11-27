@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\DELL-PC\Documents\gitHub\volunteering" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-web" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="GenerateConstructorUsingFieldsSelectionDialog">
 		<item value="false" key="OmitCallToSuper"/>
 	</section>
@@ -36,6 +36,9 @@
 		<item value="false" key="Comments"/>
 		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="FinalModifier"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="0" key="index"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>

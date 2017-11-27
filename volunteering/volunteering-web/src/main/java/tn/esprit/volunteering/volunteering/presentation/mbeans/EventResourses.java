@@ -20,6 +20,14 @@ import javax.ws.rs.core.Response.Status;
 import tn.esprit.volunteering.volunteering.persistence.Event;
 import tn.esprit.volunteering.volunteering.services.EventServiceLocal;
 
+import java.io.FileOutputStream;
+
+import javax.ws.rs.FormParam;
+
+ 
+import org.apache.commons.codec.binary.Base64;
+
+
 @Path("Event")
 @RequestScoped
 public class EventResourses {
@@ -39,6 +47,24 @@ public class EventResourses {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response CreationEvent (Event event) {
+		 String result="false";
+	        
+	        //decode Base64 String to image
+	        try{
+	            FileOutputStream fos = new FileOutputStream("C:\\wamp64\\www\\image"+event.getIdEvent()+".jpg"); //change the path where you want to save the image
+	            byte byteArray[] = Base64.decodeBase64(event.getImgPath());
+	            fos.write(byteArray);
+	             
+	            result="true";
+	            fos.close(); 
+	            event.setImgPath("http//192.168.1.108:8080/image"+event.getIdEvent()+".jpg");
+	        }
+	        catch(Exception e){
+	        	event.setImgPath(null);
+	            e.printStackTrace();
+	           
+	        }
+		
 		if (eventServiceLocal.saveEvent(event))
 			return Response.status(Status.CREATED).build();
 		return Response.status(Status.NOT_FOUND).build();		
@@ -62,8 +88,7 @@ public class EventResourses {
 		return Response.status(Status.NOT_FOUND).build(); 
 			
 	}
-	
-	
+
 	
 	
 	

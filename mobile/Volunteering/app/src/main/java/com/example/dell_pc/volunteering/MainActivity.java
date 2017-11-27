@@ -66,14 +66,16 @@ public class MainActivity extends AppCompatActivity {
             }
         };*/
 
-        final Button button = findViewById(R.id.btAjoutEvent);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button addEvent = findViewById(R.id.btAddEvent);
+        addEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AjoutEventActivity.class);
+                Intent intent = new Intent(MainActivity.this, AddEventActivity.class);
                 startActivity(intent);
             }
         });
+
+
 new GetBanks().execute();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

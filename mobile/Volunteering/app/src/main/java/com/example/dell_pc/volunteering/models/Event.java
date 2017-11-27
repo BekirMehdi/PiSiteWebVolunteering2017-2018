@@ -5,12 +5,21 @@ package com.example.dell_pc.volunteering.models;
  */
 
 public class Event {
+    private int id ;
     private String nameEvent ;
     private String type ;
     private String duration;
     private String imageRes ;
     private String lng ;
     private String  lalt;
+
+    public Event(int id,String nameEvent, String type, String duration, String imageRes) {
+        this.id=id;
+        this.nameEvent = nameEvent;
+        this.type = type;
+        this.duration = duration;
+        this.imageRes = imageRes;
+    }
 
     public Event(String nameEvent, String type, String duration, String imageRes) {
         this.nameEvent = nameEvent;
@@ -78,6 +87,14 @@ public class Event {
 
     public void setLalt(String lalt) {
         this.lalt = lalt;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

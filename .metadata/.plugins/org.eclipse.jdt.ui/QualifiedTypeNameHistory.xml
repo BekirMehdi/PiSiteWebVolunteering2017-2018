@@ -23,4 +23,9 @@
 <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
 <fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
 <fullyQualifiedTypeName name="tn.esprit.volunteering.volunteering.persistence.Event"/>
+<fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="org.primefaces.util.Base64"/>
+<fullyQualifiedTypeName name="java.util.Base64.Decoder"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
 </qualifiedTypeNameHistroy>

@@ -1,7 +1,22 @@
 <resources>
     <string name="app_name">Volunteering</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Home</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps_details">Map</string>
-    <string name="title_activity_ajout_event">AjoutEventActivity</string>
+    <string name="title_activity_ajout_event">Add Event</string>
+    <string name="title_activity_add_event">Add Event</string>
+
+
+
+    <string name="hint_name">name</string>
+    <string name="hint_type">type</string>
+    <string name="hint_Date">phone</string>
+    <string name="hint_address">address</string>
+    <string name="hint_description">Description</string>
+    <string name="btn_addEvent">Add Event</string>
+    <string name="err_msg_name">Enter your full name</string>
+    <string name="err_msg_type">Enter type event address</string>
+    <string name="err_msg_address">Enter address event</string>
+    <string name="err_msg_phone">Enter phone event</string>
+    <string name="err_msg_description">Enter description event</string>
 </resources>

@@ -48,9 +48,10 @@
         <activity
             android:name=".MapsDetailsActivity"
             android:label="@string/title_activity_maps_details" />
+
         <activity
-            android:name=".AjoutEventActivity"
-            android:label="@string/title_activity_ajout_event"
+            android:name=".AddEventActivity"
+            android:label="@string/title_activity_add_event"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

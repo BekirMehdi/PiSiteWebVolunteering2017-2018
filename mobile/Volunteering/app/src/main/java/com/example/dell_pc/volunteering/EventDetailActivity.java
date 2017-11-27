@@ -16,6 +16,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.dell_pc.volunteering.models.Event;
 import com.example.dell_pc.volunteering.utils.EventsContent;
 import com.squareup.picasso.Picasso;
@@ -33,6 +34,8 @@ public class EventDetailActivity extends AppCompatActivity {
     ImageView imgEvent ;
     TextView tvName,tvType,tvDuration;
     public String url = "http://10.0.2.2:18080/volunteering-web/rest/Event";
+
+    String urlDelete ;
     ListView lvEvents;
     List<Event> listEvents = new ArrayList<>();
     @Override
@@ -43,6 +46,7 @@ public class EventDetailActivity extends AppCompatActivity {
 //        setSupportActionBar(toolbar);
         final Button button = findViewById(R.id.button_id);
 
+        final Button btDelete = findViewById(R.id.btDelete);
 
         imgEvent = (ImageView) findViewById(R.id.imgEventBig);
         tvName = (TextView) findViewById(R.id.tv_event_detail_name);
@@ -62,7 +66,7 @@ public class EventDetailActivity extends AppCompatActivity {
                                 try {
                                     JSONObject jsonObject = response.getJSONObject(count);
                                     Event article = new
-                                            Event(jsonObject.getString("nameEvent"), jsonObject.getString("typeEvent"), jsonObject.getString("dateEvent"), jsonObject.getString("imgPath"));
+                                            Event(jsonObject.getInt("idEvent"),jsonObject.getString("nameEvent"), jsonObject.getString("typeEvent"), jsonObject.getString("dateEvent"), jsonObject.getString("imgPath"));
                                     listEvents.add(article);
                                     count++;
 
@@ -91,7 +95,37 @@ public class EventDetailActivity extends AppCompatActivity {
                                         startActivity(intent);
                                     }
                                 });
+                                urlDelete = "http://10.0.2.2:18080/volunteering-web/rest/Event?id="+listEvents.get(position).getId();
+                                btDelete.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        setContentView(R.layout.activity_main);
 
+                                        Intent intent = new Intent(EventDetailActivity.this, MainActivity.class);
+                                        intent.putExtra(KEY_POSITION, 1);
+                                        startActivity(intent);
+
+                                JsonObjectRequest getRequest = new JsonObjectRequest(Request.Method.DELETE, urlDelete, (String)null,
+                                        new Response.Listener<JSONObject>()
+                                        {
+                                            @Override
+                                            public void onResponse(JSONObject response) {
+                                                // display response
+
+                                            }
+                                        },
+                                        new Response.ErrorListener()
+                                        {
+                                            @Override
+                                            public void onErrorResponse(VolleyError error) {
+                                                Toast.makeText(EventDetailActivity.this,""+error, Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+                                );
+
+                                Mysingleton.getmInstance(EventDetailActivity.this).addToREquestQue(getRequest);
+                                    }
+                                });
 
                             }
         }
