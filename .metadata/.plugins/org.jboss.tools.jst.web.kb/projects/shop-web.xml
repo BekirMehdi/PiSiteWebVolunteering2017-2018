@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects>
+  <project name="shop-ejb"/>
+ </depends-on-projects>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/DELL-PC/.m2/repository/commons-io/commons-io/1.4/commons-io-1.4.jar"/>
+  <path value="C:/Users/DELL-PC/.m2/repository/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar"/>
+  <path value="C:/Users/DELL-PC/.m2/repository/javax/javaee-api/7.0/javaee-api-7.0.jar"/>
+  <path value="/shop-web/src/main/webapp/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="shop-web"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/DELL-PC/.m2/repository/org/primefaces/primefaces/5.3/primefaces-5.3.jar">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/faces-config.xml" project="volunteering-web"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-p.taglib.xml" project="volunteering-web"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-pm.taglib.xml" project="volunteering-web"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/DELL-PC/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
+  <path value="C:/Users/DELL-PC/.m2/repository/com/sun/mail/javax.mail/1.5.0/javax.mail-1.5.0.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core"/>
+  <core validator-id="batch-verification"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="50" name="%0" offset="263" path="%1"/>
+   <linked-el length="37" name="%0" offset="405" path="%2"/>
+   <linked-el length="36" name="%0" offset="209" path="%3"/>
+   <linked-el length="42" name="%0" offset="310" path="%4"/>
+   <linked-el length="47" name="%0" offset="251" path="%3"/>
+   <linked-el length="39" name="%0" offset="602" path="%2"/>
+   <linked-el length="40" name="%0" offset="508" path="%2"/>
+   <linked-el length="51" name="%5" offset="365" path="%6"/>
+   <linked-el length="37" name="%7" offset="405" path="%2"/>
+   <linked-el length="44" name="%7" offset="910" path="%8"/>
+   <linked-el length="42" name="%7" offset="310" path="%4"/>
+   <linked-el length="47" name="%7" offset="251" path="%3"/>
+   <linked-el length="41" name="%7" offset="653" path="%8"/>
+   <linked-el length="40" name="%7" offset="508" path="%2"/>
+   <linked-el length="41" name="%7" offset="1160" path="%8"/>
+   <linked-el length="21" name="%9" offset="1238" path="%10"/>
+   <linked-el length="21" name="%11" offset="1238" path="%10"/>
+   <linked-el length="45" name="%12" offset="1302" path="%8"/>
+   <linked-el length="45" name="%12" offset="511" path="%8"/>
+   <linked-el length="44" name="%12" offset="910" path="%8"/>
+   <linked-el length="41" name="%12" offset="653" path="%8"/>
+   <linked-el length="39" name="%12" offset="1593" path="%8"/>
+   <linked-el length="41" name="%12" offset="1160" path="%8"/>
+   <linked-el length="33" name="%13" offset="203" path="%14"/>
+   <linked-el length="12" name="%13" offset="493" path="%14"/>
+   <linked-el length="30" name="%13" offset="603" path="%15"/>
+   <linked-el length="32" name="%13" offset="424" path="%15"/>
+   <linked-el length="25" name="%13" offset="739" path="%14"/>
+   <linked-el length="29" name="%13" offset="502" path="%15"/>
+   <linked-el length="27" name="%13" offset="675" path="%15"/>
+   <linked-el length="30" name="%13" offset="337" path="%15"/>
+   <linked-el length="10" name="%13" offset="385" path="%14"/>
+   <linked-el length="12" name="%16" offset="493" path="%14"/>
+   <linked-el length="32" name="%16" offset="424" path="%15"/>
+   <linked-el length="30" name="%16" offset="337" path="%15"/>
+   <linked-el length="10" name="%16" offset="385" path="%14"/>
+   <linked-el length="51" name="%17" offset="365" path="%6"/>
+   <linked-el length="33" name="%18" offset="203" path="%14"/>
+   <linked-el length="30" name="%18" offset="603" path="%15"/>
+   <linked-el length="32" name="%18" offset="424" path="%15"/>
+   <linked-el length="25" name="%18" offset="739" path="%14"/>
+   <linked-el length="29" name="%18" offset="502" path="%15"/>
+   <linked-el length="27" name="%18" offset="675" path="%15"/>
+   <linked-el length="30" name="%18" offset="337" path="%15"/>
+   <linked-el length="50" name="%19" offset="263" path="%1"/>
+   <linked-el length="37" name="%19" offset="405" path="%2"/>
+   <linked-el length="36" name="%19" offset="209" path="%3"/>
+   <linked-el length="42" name="%19" offset="310" path="%4"/>
+   <linked-el length="47" name="%19" offset="251" path="%3"/>
+   <linked-el length="39" name="%19" offset="602" path="%2"/>
+   <linked-el length="40" name="%19" offset="508" path="%2"/>
+   <linked-el length="45" name="%20" offset="1302" path="%8"/>
+   <linked-el length="45" name="%20" offset="511" path="%8"/>
+   <linked-el length="45" name="%21" offset="1302" path="%8"/>
+   <linked-el length="45" name="%21" offset="511" path="%8"/>
+   <linked-el length="44" name="%21" offset="910" path="%8"/>
+   <linked-el length="41" name="%21" offset="653" path="%8"/>
+   <linked-el length="39" name="%21" offset="1593" path="%8"/>
+   <linked-el length="41" name="%21" offset="1160" path="%8"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias
+   path="/shop-web/src/main/java/tn/esprit/shop/shop/AuthentificationBean.java" value="%0"/>
+  <alias path="/shop-web/src/main/webapp/pages/category/form.xhtml" value="%15"/>
+  <alias path="request" value="%5"/>
+  <alias
+   path="/shop-ejb/src/main/java/tn/esprit/shop/shop/persistence/User.java" value="%7"/>
+  <alias path="/shop-web/src/main/webapp/pages/success.xhtml" value="%4"/>
+  <alias path="/shop-web/src/main/webapp/template/navbar.xhtml" value="%1"/>
+  <alias path="project.artifactId" value="%9"/>
+  <alias path="/shop-web/pom.xml" value="%10"/>
+  <alias path="project" value="%11"/>
+  <alias path="/shop-web/src/main/webapp/template/template.xhtml" value="%6"/>
+  <alias path="registerCustomerBean" value="%12"/>
+  <alias path="/shop-web/src/main/webapp/pages/category/list.xhtml" value="%14"/>
+  <alias path="categoryBean" value="%13"/>
+  <alias path="/shop-web/src/main/webapp/pages/login.xhtml" value="%2"/>
+  <alias
+   path="/shop-ejb/src/main/java/tn/esprit/shop/shop/persistence/Category.java" value="%16"/>
+  <alias path="request.contextPath" value="%17"/>
+  <alias path="/shop-web/src/main/webapp/pages/register.xhtml" value="%8"/>
+  <alias
+   path="/shop-web/src/main/java/tn/esprit/shop/shop/CategoryBean.java" value="%18"/>
+  <alias path="authentificationBean" value="%19"/>
+  <alias
+   path="/shop-ejb/src/main/java/tn/esprit/shop/shop/persistence/Customer.java" value="%20"/>
+  <alias path="/shop-web/src/main/webapp/template/identity.xhtml" value="%3"/>
+  <alias
+   path="/shop-web/src/main/java/tn/esprit/shop/shop/RegisterCustomerBean.java" value="%21"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

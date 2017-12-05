@@ -36,9 +36,9 @@ public class Event implements Serializable {
 	private String longitude;
 	private String imgPath ;
 	private static final long serialVersionUID = 1L;
-/*
+
 	@OneToMany(mappedBy = "event")
-	private List<User> listUsers ;*/
+	private List<User> listUsers ;
 	
 
 	/*@ManyToOne
@@ -119,14 +119,14 @@ public class Event implements Serializable {
 	}
 */
 
-	/*public List<User> getListUsers() {
+	public List<User> getListUsers() {
 		return listUsers;
 	}
 
 	public void setListUsers(List<User> listUsers) {
 		this.listUsers = listUsers;
 	}
-*/
+
 	public String getDescription() {
 		return description;
 	}

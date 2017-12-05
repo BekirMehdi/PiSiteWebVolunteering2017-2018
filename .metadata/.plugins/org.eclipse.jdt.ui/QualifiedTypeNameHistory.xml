@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
 <fullyQualifiedTypeName name="javax.enterprise.context.RequestScoped"/>
 <fullyQualifiedTypeName name="javax.ws.rs.GET"/>
 <fullyQualifiedTypeName name="javax.ws.rs.core.Response.Status"/>
@@ -8,7 +7,6 @@
 <fullyQualifiedTypeName name="java.awt.Event"/>
 <fullyQualifiedTypeName name="javax.ws.rs.DELETE"/>
 <fullyQualifiedTypeName name="javax.websocket.server.PathParam"/>
-<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
 <fullyQualifiedTypeName name="tn.esprit.volunteering.volunteering.services.EventServiceLocal"/>
 <fullyQualifiedTypeName name="tn.esprit.volunteering.volunteering.persistence.User"/>
 <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
@@ -18,14 +16,16 @@
 <fullyQualifiedTypeName name="javax.ws.rs.POST"/>
 <fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="tn.esprit.volunteering.volunteering.persistence.Todo"/>
 <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
-<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
-<fullyQualifiedTypeName name="tn.esprit.volunteering.volunteering.persistence.Event"/>
 <fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="org.primefaces.util.Base64"/>
 <fullyQualifiedTypeName name="java.util.Base64.Decoder"/>
 <fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="tn.esprit.volunteering.volunteering.persistence.Event"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>

@@ -8,12 +8,14 @@ C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ej
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\util\DBPopulator.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Sponsor.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\TodoServiceLocal.java
+C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Category.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\NGO.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Event.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\EventService.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Todo.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\EventServiceLocal.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\News.java
+C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Product.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\UserServiceLocal.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\TodoServiceRemote.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Course.java

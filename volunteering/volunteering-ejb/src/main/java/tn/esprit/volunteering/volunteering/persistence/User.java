@@ -38,9 +38,9 @@ public class User implements Serializable {
 	@ManyToOne
 	private Admin adminManage ;
 	
-	/*@ManyToOne
+	@ManyToOne
 	@JoinColumn(name = "event_fk", nullable = true)
-	private Event event ;*/
+	private Event event ;
 
 	public User() {
 	
@@ -118,13 +118,13 @@ public class User implements Serializable {
 	public void setAdminManage(Admin adminManage) {
 		this.adminManage = adminManage;
 	}
-/*
+
 	public Event getEvent() {
 		return event;
 	}
 	public void setEvent(Event event) {
 		this.event = event;
-	}*/
+	}
 
    
 }

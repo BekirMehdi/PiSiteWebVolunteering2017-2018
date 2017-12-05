@@ -1,9 +1,11 @@
+tn\esprit\volunteering\volunteering\persistence\Category.class
 tn\esprit\volunteering\volunteering\services\UserServiceRemote.class
 tn\esprit\volunteering\volunteering\persistence\News.class
 tn\esprit\volunteering\volunteering\services\TodoServiceLocal.class
 tn\esprit\volunteering\volunteering\services\UserServiceLocal.class
 tn\esprit\volunteering\volunteering\services\EventServiceLocal.class
 tn\esprit\volunteering\volunteering\services\TodoService.class
+tn\esprit\volunteering\volunteering\persistence\Product.class
 tn\esprit\volunteering\volunteering\persistence\Volunteer.class
 tn\esprit\volunteering\volunteering\services\UserService.class
 tn\esprit\volunteering\volunteering\services\EventService.class

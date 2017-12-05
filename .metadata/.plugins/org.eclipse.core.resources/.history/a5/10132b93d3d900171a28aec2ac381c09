@@ -1,0 +1,80 @@
+package tn.esprit.volunteering.volunteering.persistence;
+
+import java.io.Serializable;
+import java.lang.Double;
+import java.lang.String;
+import java.util.List;
+
+import javax.persistence.*;
+
+
+/**
+ * Entity implementation class for Entity: Product
+ *
+ */
+@Entity
+
+public class Product implements Serializable {
+
+	   
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	private int idProduct;
+	private String name;
+	private Double unitCost;
+	private int stock;
+	private String picture;
+	private Category category;
+
+	private static final long serialVersionUID = 1L;
+
+	public Product() {
+		super();
+	}   
+	public int getIdProduct() {
+		return this.idProduct;
+	}
+
+	public void setIdProduct(int idProduct) {
+		this.idProduct = idProduct;
+	}   
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}   
+	public Double getUnitCost() {
+		return this.unitCost;
+	}
+
+	public void setUnitCost(Double unitCost) {
+		this.unitCost = unitCost;
+	}   
+	public int getStock() {
+		return this.stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}   
+	public String getPicture() {
+		return this.picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+	
+	@ManyToOne
+	@JoinColumn(name = "category_fk")
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+   
+	
+}

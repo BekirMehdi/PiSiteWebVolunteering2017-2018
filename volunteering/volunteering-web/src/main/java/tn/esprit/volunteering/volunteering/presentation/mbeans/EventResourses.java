@@ -57,7 +57,7 @@ public class EventResourses {
 	             
 	            result="true";
 	            fos.close(); 
-	            event.setImgPath("http//192.168.1.108:8080/image"+event.getIdEvent()+".jpg");
+	            event.setImgPath("http://10.0.2.2:8080/image"+event.getIdEvent()+".jpg");
 	        }
 	        catch(Exception e){
 	        	event.setImgPath(null);
@@ -82,8 +82,9 @@ public class EventResourses {
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response UpdateRendezVousById(@QueryParam(value="id")int idEvent) {
-		if (eventServiceLocal.updateEvent(idEvent))
+	public Response UpdateRendezVousById(@QueryParam(value="id")int idEvent,Event event) {
+	
+		if (eventServiceLocal.updateEvent(idEvent,event))
 			return Response.status(Status.OK).build();
 		return Response.status(Status.NOT_FOUND).build(); 
 			

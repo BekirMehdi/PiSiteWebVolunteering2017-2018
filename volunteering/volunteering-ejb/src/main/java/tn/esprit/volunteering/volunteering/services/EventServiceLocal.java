@@ -13,12 +13,13 @@ public interface EventServiceLocal {
 	public byte[] findPictureByProductName(String productName);
 	Event createEvent(Event event);
 	boolean saveEvent(Event event);
-	boolean updateEvent(int id);
+	boolean updateEvent(int id,Event event);
 	void saveEven(Event event);
 	void removeEvent(Event event);
 	List<Event> findAllEvents();
 	Event findEventByName(String name);
 	public boolean NameExists(String login);
 	public boolean removeEvent(int id);
+	public Event findEventById(int id);
 
 }

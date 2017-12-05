@@ -42,9 +42,6 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 		}
 	}
 
-	public Event findEventById(int id) {
-		return em.find(Event.class, id);
-	}
 
 	public void removeEvent(Event event) {
 		
@@ -128,15 +125,23 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 
 
 	@Override
-	public boolean updateEvent(int id) {
+	public boolean updateEvent(int id,Event event) {
 		try {
-			
-			em.merge(findEventById(id)); 
+			Event ev=findEventById(id);
+			ev=event;
+			em.merge(ev); 
 			return true;
 		
 		} catch (RuntimeException re){
 		return false ;
 		}
+	}
+
+
+	@Override
+	public Event findEventById(int id) {
+		return em.find(Event.class, id);
+
 	}
 	
 }

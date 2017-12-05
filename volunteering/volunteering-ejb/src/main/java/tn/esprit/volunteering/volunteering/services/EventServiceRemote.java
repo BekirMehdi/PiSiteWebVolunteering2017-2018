@@ -16,5 +16,6 @@ public interface EventServiceRemote {
 	Event findEventByName(String name);
 	public boolean removeEvent(int id);
 	void saveEven(Event event);
-	boolean updateEvent(int id);
+	boolean updateEvent(int id,Event event);
+	public Event findEventById(int id) ;
 }
