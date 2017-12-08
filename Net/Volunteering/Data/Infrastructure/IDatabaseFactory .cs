@@ -1,4 +1,5 @@
 ﻿using Data;
+using Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Data.Infrastructure
 {
     public interface IDatabaseFactory : IDisposable
     {
-        Contexte DataContext { get; }
+        volunteeringContext DataContext { get; }
     }
 
 }

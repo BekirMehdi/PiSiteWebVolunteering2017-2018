@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Data</RootNamespace>
     <AssemblyName>Data</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -62,13 +62,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712051816480_v1.cs" />
-    <Compile Include="Migrations\201712051816480_v1.Designer.cs">
-      <DependentUpon>201712051816480_v1.cs</DependentUpon>
+    <Compile Include="Conventions\DateTime2Convention.cs" />
+    <Compile Include="Infrastructure\DatabaseFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDatabaseFactory .cs" />
+    <Compile Include="Infrastructure\IRepositoryBase.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201712081412430_v1.cs" />
+    <Compile Include="Migrations\201712081412430_v1.Designer.cs">
+      <DependentUpon>201712081412430_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712081415530_v2.cs" />
+    <Compile Include="Migrations\201712081415530_v2.Designer.cs">
+      <DependentUpon>201712081415530_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712081417480_v21.cs" />
+    <Compile Include="Migrations\201712081417480_v21.Designer.cs">
+      <DependentUpon>201712081417480_v21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712081944316_v3.cs" />
+    <Compile Include="Migrations\201712081944316_v3.Designer.cs">
+      <DependentUpon>201712081944316_v3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712081949277_v4.cs" />
+    <Compile Include="Migrations\201712081949277_v4.Designer.cs">
+      <DependentUpon>201712081949277_v4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712082000328_initil.cs" />
+    <Compile Include="Migrations\201712082000328_initil.Designer.cs">
+      <DependentUpon>201712082000328_initil.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mapping\categoryMap.cs" />
     <Compile Include="Models\Mapping\courseMap.cs" />
+    <Compile Include="Models\Mapping\evenementMap.cs" />
     <Compile Include="Models\Mapping\newsMap.cs" />
     <Compile Include="Models\Mapping\productMap.cs" />
     <Compile Include="Models\Mapping\sponsorMap.cs" />
@@ -85,14 +114,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712051816480_v1.resx">
-      <DependentUpon>201712051816480_v1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712081412430_v1.resx">
+      <DependentUpon>201712081412430_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712081415530_v2.resx">
+      <DependentUpon>201712081415530_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712081417480_v21.resx">
+      <DependentUpon>201712081417480_v21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712081944316_v3.resx">
+      <DependentUpon>201712081944316_v3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712081949277_v4.resx">
+      <DependentUpon>201712081949277_v4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712082000328_initil.resx">
+      <DependentUpon>201712082000328_initil.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

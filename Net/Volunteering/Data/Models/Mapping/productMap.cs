@@ -8,26 +8,27 @@ namespace Data.Models.Mapping
         public productMap()
         {
             // Primary Key
-            this.HasKey(t => t.idProduct);
+            this.HasKey(t => t.ProductPk);
 
             // Properties
-            this.Property(t => t.idProduct)
+            this.Property(t => t.ProductPk)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
-            this.Property(t => t.name)
+            this.Property(t => t.Description)
                 .HasMaxLength(255);
 
-            this.Property(t => t.picture)
+            this.Property(t => t.Name)
                 .HasMaxLength(255);
 
             // Table & Column Mappings
             this.ToTable("product", "volunteering");
-            this.Property(t => t.idProduct).HasColumnName("idProduct");
-            this.Property(t => t.name).HasColumnName("name");
-            this.Property(t => t.picture).HasColumnName("picture");
-            this.Property(t => t.stock).HasColumnName("stock");
-            this.Property(t => t.unitCost).HasColumnName("unitCost");
-            this.Property(t => t.category_fk).HasColumnName("category_fk");
+            this.Property(t => t.ProductPk).HasColumnName("ProductPk");
+            this.Property(t => t.DateProd).HasColumnName("DateProd");
+            this.Property(t => t.Description).HasColumnName("Description");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.Price).HasColumnName("Price");
+            this.Property(t => t.Quantity).HasColumnName("Quantity");
+            this.Property(t => t.CategoryId).HasColumnName("CategoryId");
         }
     }
 }

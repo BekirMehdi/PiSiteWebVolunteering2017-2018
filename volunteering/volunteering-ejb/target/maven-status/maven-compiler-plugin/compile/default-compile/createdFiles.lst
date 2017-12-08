@@ -16,6 +16,6 @@ tn\esprit\volunteering\volunteering\persistence\Course.class
 tn\esprit\volunteering\volunteering\services\EventServiceRemote.class
 tn\esprit\volunteering\volunteering\persistence\NGO.class
 tn\esprit\volunteering\volunteering\persistence\Sponsor.class
-tn\esprit\volunteering\volunteering\persistence\Event.class
 tn\esprit\volunteering\volunteering\util\DBPopulator.class
+tn\esprit\volunteering\volunteering\persistence\Evenement.class
 tn\esprit\volunteering\volunteering\persistence\Todo.class

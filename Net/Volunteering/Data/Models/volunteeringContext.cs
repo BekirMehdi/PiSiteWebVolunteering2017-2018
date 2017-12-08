@@ -18,6 +18,7 @@ namespace Data.Models
 
         public DbSet<category> categories { get; set; }
         public DbSet<course> courses { get; set; }
+        public DbSet<evenement> evenements { get; set; }
         public DbSet<news> news { get; set; }
         public DbSet<product> products { get; set; }
         public DbSet<sponsor> sponsors { get; set; }
@@ -28,6 +29,7 @@ namespace Data.Models
         {
             modelBuilder.Configurations.Add(new categoryMap());
             modelBuilder.Configurations.Add(new courseMap());
+            modelBuilder.Configurations.Add(new evenementMap());
             modelBuilder.Configurations.Add(new newsMap());
             modelBuilder.Configurations.Add(new productMap());
             modelBuilder.Configurations.Add(new sponsorMap());

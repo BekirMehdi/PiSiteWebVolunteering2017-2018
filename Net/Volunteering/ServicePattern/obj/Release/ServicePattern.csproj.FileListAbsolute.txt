@@ -1,0 +1,11 @@
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\ServicePattern.dll
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\ServicePattern.pdb
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\Data.dll
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\Domain.dll
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\EntityFramework.dll
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\Data.pdb
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\Domain.pdb
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\bin\Release\EntityFramework.xml
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\obj\Release\ServicePattern.csprojResolveAssemblyReference.cache
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\obj\Release\ServicePattern.dll
+C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\ServicePattern\obj\Release\ServicePattern.pdb

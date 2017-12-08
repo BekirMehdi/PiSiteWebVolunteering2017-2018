@@ -1,11 +1,1 @@
 C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\Service.dll
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\Service.pdb
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\Data.dll
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\Domain.dll
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\EntityFramework.dll
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\Data.pdb
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\Domain.pdb
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\bin\Debug\EntityFramework.xml
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\obj\Debug\Service.dll
-C:\Users\DELL-PC\Documents\Visual Studio 2015\Projects\Volunteering\Service\obj\Debug\Service.pdb

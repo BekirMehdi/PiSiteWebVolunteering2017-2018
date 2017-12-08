@@ -1,0 +1,21 @@
+package tn.esprit.volunteering.volunteering.services;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import tn.esprit.volunteering.volunteering.persistence.Events;
+
+@Remote
+public interface EventServiceRemote {
+
+	Events createEvent(Events event);
+	boolean saveEvent(Events event);
+	void removeEvent(Events event);
+	List<Events> findAllEvents();
+	Events findEventByName(String name);
+	public boolean removeEvent(int id);
+	void saveEven(Events event);
+	boolean updateEvent(int id,Events event);
+	public Events findEventById(int id) ;
+}

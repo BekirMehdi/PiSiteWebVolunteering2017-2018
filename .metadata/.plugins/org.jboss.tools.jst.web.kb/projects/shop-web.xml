@@ -20,15 +20,15 @@
    <libraries>
     <library class="faces-config">
      <id class="model-object"
-      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/faces-config.xml" project="volunteering-web"/>
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/faces-config.xml" project="shop-web"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-p.taglib.xml" project="volunteering-web"/>
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-p.taglib.xml" project="shop-web"/>
     </library>
     <library class="facelet">
      <id class="model-object"
-      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-pm.taglib.xml" project="volunteering-web"/>
+      path="FileSystems/lib-primefaces-5.3.jar/meta-inf/primefaces-pm.taglib.xml" project="shop-web"/>
     </library>
    </libraries>
   </path>

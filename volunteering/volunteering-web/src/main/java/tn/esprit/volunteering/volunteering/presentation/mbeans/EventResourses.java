@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import tn.esprit.volunteering.volunteering.persistence.Event;
+import tn.esprit.volunteering.volunteering.persistence.Evenement;
 import tn.esprit.volunteering.volunteering.services.EventServiceLocal;
 
 import java.io.FileOutputStream;
@@ -46,7 +46,7 @@ public class EventResourses {
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response CreationEvent (Event event) {
+	public Response CreationEvent (Evenement event) {
 		 String result="false";
 	        
 	        //decode Base64 String to image
@@ -82,7 +82,7 @@ public class EventResourses {
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response UpdateRendezVousById(@QueryParam(value="id")int idEvent,Event event) {
+	public Response UpdateRendezVousById(@QueryParam(value="id")int idEvent,Evenement event) {
 	
 		if (eventServiceLocal.updateEvent(idEvent,event))
 			return Response.status(Status.OK).build();

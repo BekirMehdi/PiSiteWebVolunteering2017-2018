@@ -20,5 +20,6 @@ namespace Data.Models
         public string mailAss { get; set; }
         public string nameAss { get; set; }
         public Nullable<int> adminManage_idUser { get; set; }
+        public Nullable<int> event_fk { get; set; }
     }
 }

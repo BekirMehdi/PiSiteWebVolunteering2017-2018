@@ -1,0 +1,25 @@
+package tn.esprit.volunteering.volunteering.services;
+
+import java.util.List;
+
+import javax.ejb.Local;
+
+import tn.esprit.volunteering.volunteering.persistence.Events;
+import tn.esprit.volunteering.volunteering.persistence.User;
+
+@Local
+public interface EventServiceLocal {
+	public List<User> findUsersByEvent(Events event);
+	public byte[] findPictureByProductName(String productName);
+	Events createEvent(Events event);
+	boolean saveEvent(Events event);
+	boolean updateEvent(int id,Events event);
+	void saveEven(Events event);
+	void removeEvent(Events event);
+	List<Events> findAllEvents();
+	Events findEventByName(String name);
+	public boolean NameExists(String login);
+	public boolean removeEvent(int id);
+	public Events findEventById(int id);
+
+}

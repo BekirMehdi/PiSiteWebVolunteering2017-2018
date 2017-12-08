@@ -1,5 +1,6 @@
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\EventServiceRemote.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\UserService.java
+C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Evenement.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Admin.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Volunteer.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\UserServiceRemote.java
@@ -10,7 +11,6 @@ C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ej
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\TodoServiceLocal.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Category.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\NGO.java
-C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Event.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\EventService.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\persistence\Todo.java
 C:\Users\DELL-PC\Documents\gitHub\piDevVolunteering\volunteering\volunteering-ejb\src\main\java\tn\esprit\volunteering\volunteering\services\EventServiceLocal.java

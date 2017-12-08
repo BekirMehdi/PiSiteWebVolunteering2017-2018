@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Data.Infrastructure
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        private Contexte dataContext;
+        private volunteeringContext dataContext;
         private readonly IDbSet<T> dbset;
         IDatabaseFactory databaseFactory;
         public RepositoryBase(IDatabaseFactory dbFactory)
@@ -20,7 +21,7 @@ namespace Data.Infrastructure
 
 
         }
-        protected Contexte DataContext
+        protected volunteeringContext DataContext
         {
             get { return dataContext = databaseFactory.DataContext; }
         }

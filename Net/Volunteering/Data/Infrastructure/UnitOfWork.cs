@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Data.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
        
-         private Contexte dataContext;
+         private volunteeringContext dataContext;
 
         IDatabaseFactory dbFactory;
         public UnitOfWork(IDatabaseFactory dbFactory)

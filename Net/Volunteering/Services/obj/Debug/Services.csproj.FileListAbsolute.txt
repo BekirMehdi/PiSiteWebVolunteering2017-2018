@@ -1,0 +1,13 @@
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\Services.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\Services.pdb
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\Data.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\Domain.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\ServicePattern.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\EntityFramework.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\Data.pdb
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\Domain.pdb
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\ServicePattern.pdb
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\bin\Debug\EntityFramework.xml
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\obj\Debug\Services.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\Services\obj\Debug\Services.pdb

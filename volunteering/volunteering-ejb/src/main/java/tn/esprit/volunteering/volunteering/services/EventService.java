@@ -10,7 +10,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-import tn.esprit.volunteering.volunteering.persistence.Event;
+import tn.esprit.volunteering.volunteering.persistence.Evenement;
 import tn.esprit.volunteering.volunteering.persistence.User;
 
 
@@ -25,13 +25,13 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 	}
 
 	
-	public Event createEvent(Event event) {
+	public Evenement createEvent(Evenement event) {
 		em.persist(event);
 		return event;
 	}
 
 
-	public boolean saveEvent(Event event) {
+	public boolean saveEvent(Evenement event) {
 		
 		try {
 			em.merge(event); 
@@ -43,21 +43,21 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 	}
 
 
-	public void removeEvent(Event event) {
+	public void removeEvent(Evenement event) {
 		
 		em.remove(em.merge(event));
 	}
 
 
-	public List<Event> findAllEvents() {
-		return em.createQuery("select e from Event e", Event.class)
+	public List<Evenement> findAllEvents() {
+		return em.createQuery("select e from Event e", Evenement.class)
 				.getResultList();
 	}
 
-	public Event findEventByName(String name) {
-		Event found = null;
-		TypedQuery<Event> query = em.createQuery(
-				"select e from Event e where c.name=:x", Event.class);
+	public Evenement findEventByName(String name) {
+		Evenement found = null;
+		TypedQuery<Evenement> query = em.createQuery(
+				"select e from Event e where c.name=:x", Evenement.class);
 		query.setParameter("x", name);
 		try {
 			found = query.getSingleResult();
@@ -68,7 +68,7 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 		return found;
 	}
 	
-	public List<User> findUsersByEvent(Event event) {
+	public List<User> findUsersByEvent(Evenement event) {
 		return em.createQuery("select u from User u where u.event=:e",
 						User.class).setParameter("e", event)
 				.getResultList();
@@ -118,16 +118,16 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 
 
 	@Override
-	public void saveEven(Event event) {
+	public void saveEven(Evenement event) {
 		em.merge(event); 
 		
 	}
 
 
 	@Override
-	public boolean updateEvent(int id,Event event) {
+	public boolean updateEvent(int id,Evenement event) {
 		try {
-			Event ev=findEventById(id);
+			Evenement ev=findEventById(id);
 			ev=event;
 			em.merge(ev); 
 			return true;
@@ -139,8 +139,8 @@ public class EventService implements EventServiceRemote,EventServiceLocal {
 
 
 	@Override
-	public Event findEventById(int id) {
-		return em.find(Event.class, id);
+	public Evenement findEventById(int id) {
+		return em.find(Evenement.class, id);
 
 	}
 	

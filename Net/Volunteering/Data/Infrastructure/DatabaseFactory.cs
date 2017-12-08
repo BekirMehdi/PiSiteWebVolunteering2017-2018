@@ -1,4 +1,5 @@
 ﻿using Data;
+using Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ namespace Data.Infrastructure
 {
     public class DatabaseFactory : Disposable, IDatabaseFactory
     {
-        private Contexte dataContext;
-        public Contexte DataContext { get { return dataContext; } }
+        private volunteeringContext dataContext;
+        public volunteeringContext DataContext { get { return dataContext; } }
 
         public DatabaseFactory()
         {
-            dataContext = new Contexte();
+            dataContext = new volunteeringContext();
         }
         protected override void DisposeCore()
         {

@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response;
 
 import org.primefaces.event.FileUploadEvent;
 
-import tn.esprit.volunteering.volunteering.persistence.Event;
+import tn.esprit.volunteering.volunteering.persistence.Evenement;
 import tn.esprit.volunteering.volunteering.persistence.Todo;
 import tn.esprit.volunteering.volunteering.persistence.User;
 import tn.esprit.volunteering.volunteering.services.EventServiceLocal;
@@ -40,21 +40,21 @@ public class EventBean {
 	
 	private boolean formDisplayed;
 	
-	private Event e;
+	private Evenement e;
 	
 	private User user = new User(20,"mehdi","bekir","bizerte cite Jala");
 	
-	private Event event = new Event();
+	private Evenement event = new Evenement();
 	
 	private Todo todo = new Todo();
 	
 	private List<User> listUsers = new ArrayList<User>();
 	
-	private List<Event> listEvents = new ArrayList<Event>();
+	private List<Evenement> listEvents = new ArrayList<Evenement>();
 	
 	private boolean formDespled =false ;
 	
-	private List<Event> filteredEvents;
+	private List<Evenement> filteredEvents;
 	
 	@PostConstruct
 	public void init(){
@@ -81,7 +81,7 @@ public class EventBean {
 	}
 	
 	public String createEvent() {
-		 Event event = new Event();
+		 Evenement event = new Evenement();
 		 this.event=event;
 		return "createEvent?faces-redirect=true";
 		
@@ -92,7 +92,7 @@ public class EventBean {
 		return "index?faces-redirect=true";
 	}
 	
-	public String editAction(Event event) {
+	public String editAction(Evenement event) {
 
 		this.event=event;
 		return "edit?faces-redirect=true";
@@ -103,18 +103,18 @@ public class EventBean {
 		return "showFront?faces-redirect=true";
 	}
 	
-	public String showAction(Event event) {
+	public String showAction(Evenement event) {
 
 		this.event=event;
 		return "show?faces-redirect=true";
 	}
-	public String showFrontAction(Event event) {
+	public String showFrontAction(Evenement event) {
 		listUsers=eventServiceLocal.findUsersByEvent(event);
 		this.event=event;
 		return "showFront?faces-redirect=true";
 	}
 
-	public String deleteAction(Event event) {
+	public String deleteAction(Evenement event) {
 
 		eventServiceLocal.removeEvent(event);
 		init();
@@ -144,19 +144,19 @@ public class EventBean {
 	public void onFilter() {
 		formDisplayed = false;
 	}
-	public Event getEvent() {
+	public Evenement getEvent() {
 		return event;
 	}
 
-	public void setEvent(Event event) {
+	public void setEvent(Evenement event) {
 		this.event = event;
 	}
 
-	public List<Event> getListEvents() {
+	public List<Evenement> getListEvents() {
 		return listEvents;
 	}
 
-	public void setListEvents(List<Event> listEvents) {
+	public void setListEvents(List<Evenement> listEvents) {
 		this.listEvents = listEvents;
 	}
 
@@ -176,11 +176,11 @@ public class EventBean {
 		this.listUsers = listUsers;
 	}
 
-	public List<Event> getFilteredEvents() {
+	public List<Evenement> getFilteredEvents() {
 		return filteredEvents;
 	}
 
-	public void setFilteredEvents(List<Event> filteredEvents) {
+	public void setFilteredEvents(List<Evenement> filteredEvents) {
 		this.filteredEvents = filteredEvents;
 	}
 

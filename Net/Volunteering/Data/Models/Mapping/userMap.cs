@@ -65,6 +65,7 @@ namespace Data.Models.Mapping
             this.Property(t => t.mailAss).HasColumnName("mailAss");
             this.Property(t => t.nameAss).HasColumnName("nameAss");
             this.Property(t => t.adminManage_idUser).HasColumnName("adminManage_idUser");
+            this.Property(t => t.event_fk).HasColumnName("event_fk");
         }
     }
 }

@@ -40,7 +40,7 @@ public class User implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "event_fk", nullable = true)
-	private Event event ;
+	private Evenement event ;
 
 	public User() {
 	
@@ -119,10 +119,10 @@ public class User implements Serializable {
 		this.adminManage = adminManage;
 	}
 
-	public Event getEvent() {
+	public Evenement getEvent() {
 		return event;
 	}
-	public void setEvent(Event event) {
+	public void setEvent(Evenement event) {
 		this.event = event;
 	}
 
