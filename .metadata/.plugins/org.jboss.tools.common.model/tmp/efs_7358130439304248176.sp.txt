@@ -1,0 +1,325 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/templateBackOffice.xhtml">
+
+	<ui:define name=""></ui:define>
+	<ui:define name="pageContent">
+		<section class="divider">
+			<div class="container pt-0">
+				<ol class="breadcrumb text-center text-black mt-10">
+						<h:form>
+						<li><h:commandLink value="Home" styleClass="btn btn-dark btn-theme-colored btn-sm mt-10" action="#{eventBean.doCancel()}" /></li>
+					</h:form>
+					<li class="active text-theme-colored">Edit Event</li>
+				</ol>
+
+				<div class="pt-10 divider parallax layer-overlay overlay-white-8"
+			data-bg-img="#{request.contextPath}/resources/images/bg/bg1.jpg"
+			style="background-image: url(&quot;images/bg/bg1.jpg&quot;); background-position: 50% -342px;">
+					<div class="col-md-5">
+						<h4 class="mt-0 mb-30 line-bottom">event location</h4>
+						<!-- Google Map HTML Codes -->
+						<div id="map"
+							data-address="121 King Street, Melbourne Victoria 3000 Australia"
+							data-popupstring-id="#popupstring1"
+							class="map-canvas autoload-map" data-mapstyle="style2"
+							data-height="400" data-latlng="-37.817314,144.955431"
+							data-title="sample title" data-zoom="12"
+							data-marker="images/map-icon-blue.png"></div>
+						<div class="map-popupstring hidden" id="popupstring1">
+							<div class="text-center">
+								<h3>CharityPress Office</h3>
+								<p>121 King Street, Melbourne Victoria 3000 Australia</p>
+							</div>
+						</div>
+						<!-- Google Map Javascript Codes -->
+						<script
+							src="http://maps.google.com/maps/api/js?key=AIzaSyAYWE4mHmR9GyPsHSOVZrSCOOljk8DU9B4"></script>
+						<script src="js/google-map-init.js"></script>
+					</div>
+					<div class="col-md-7">
+						<h4 class="mt-0 mb-30 line-bottom">add event?</h4>
+						<!-- Contact Form -->
+						<h:form id="form_event">
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="form_name">Name <small>*</small></label>
+										<h:inputText placeholder="Enter Name"
+											value="#{eventBean.event.nameEvent}" id="form_name"
+											name="form_name" styleClass="form-control" required="true"
+											requiredMessage="name is required">
+											<f:ajax event="blur" execute="@this" render="msg_name" />
+										</h:inputText>
+										<h:message id="msg_name" for="form_name" styleClass="error" />
+
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="form_email">Type <small>*</small></label>
+										<h:inputText value="#{eventBean.event.typeEvent}"
+											id="form_type" name="form_type" styleClass="form-control"
+											required="true" requiredMessage="type is required">
+											<f:ajax event="blur" execute="@this" render="msg_type" />
+										</h:inputText>
+										<h:message id="msg_type" for="form_type" styleClass="error" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="form_name">Address <small>*</small></label>
+										<h:inputText value="#{eventBean.event.address}"
+											id="form_subject" name="form_subject"
+											styleClass="form-control required"
+											placeholder="Enter Subject" />
+									</div>
+
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="form_phone">date</label>
+										<h:inputText value="#{eventBean.event.dateEvent}"
+											id="form_date" name="form_phone" styleClass="form-control"
+											converterMessage="Example: 17/12/2010">
+											<f:convertDateTime pattern="dd/MM/yyyy" />
+											<f:ajax event="blur" execute="@this" render="msg_birthdate" />
+										</h:inputText>
+										<h:message id="msg_birthdate" for="form_date"
+											styleClass="error" />
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="form_mail">Responsible mail <small>*</small></label>
+										<h:inputText placeholder="Enter mail"
+											value="#{eventBean.event.mailResp}" id="form_mail"
+											name="form_mail" styleClass="form-control"
+											validatorMessage="invalid email!">
+											<f:ajax event="blur" execute="@this" render="msg_email" />
+											<f:validateRegex
+												pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$" />
+										</h:inputText>
+										<h:message id="msg_email" for="form_mail" styleClass="error" />
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="form_phone">Responsible Phone <small>*</small></label>
+										<h:inputText value="#{eventBean.event.phoneResp}"
+											id="form_phone" name="form_phone"
+											styleClass="form-control required" rows="5"
+											placeholder="Enter Description"
+											validatorMessage="between 8 and 12" required="true"
+											requiredMessage="Phone is required">
+											<f:validateLength minimum="8" maximum="12" />
+											<f:ajax event="blur" execute="@this" render="msg_phone" />
+										</h:inputText>
+										<h:message id="msg_phone" for="form_phone" styleClass="error" />
+
+									</div>
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label for="form_name">description</label>
+								<h:inputTextarea   value="#{eventBean.event.description}"
+								id="form_message" name="form_message"
+									styleClass="form-control  required" rows="5"
+									placeholder="Enter Description"
+									validatorMessage="between 6 and 200" required="true"
+									requiredMessage="Description is required">
+									<f:validateLength minimum="6" maximum="200" />
+									<f:ajax event="blur" execute="@this" render="msg_description" />
+								</h:inputTextarea>
+								<h:message id="msg_description" for="form_message"
+									styleClass="error" />
+							</div>
+					
+							<div class="form-group">
+								<h:inputText id="form_botcheck" name="form_botcheck"
+									class="lalt" styleClass="hide" value="#{eventBean.event.latitude}" />
+									<h:inputText id="form_botcheck1" name="form_botcheck1"
+									class="lng" styleClass="hide" value="#{eventBean.event.longitude}" />
+								<h:commandButton value="save" action="#{eventBean.doSave()}"
+									class="btn btn-dark btn-theme-colored btn-flat mr-5"
+									data-loading-text="Please wait..." />
+									
+								
+
+							</div>
+						</h:form>
+
+						<!-- Contact Form Validation-->
+
+					<script type="text/javascript">
+				    	var markers = [];
+				
+				
+				
+				
+						
+						function geocodePosition(pos) {
+							var geocoder = new google.maps.Geocoder();
+							  geocoder.geocode({
+							    latLng: pos
+							  }, function(responses) {
+							    if (responses &amp;&amp; responses.length > 0) {
+							      updateMarkerAddress(responses[0].formatted_address);
+							    } else {
+							      updateMarkerAddress('Cannot determine address at this location.');
+							    }
+							  });
+						}
+				
+						function updateMarkerStatus(str) {
+							document.getElementById('markerStatus').innerHTML = str;
+						}
+				
+						function updateMarkerPosition(latLng) {
+						  	document.getElementById('info').innerHTML = [
+						    latLng.lat(),
+						    latLng.lng()
+						  ].join(', ');
+						}
+				
+						function updateMarkerAddress(str) {
+						  	document.getElementById('address').innerHTML = str;
+						}
+						
+					     var lngx =document.getElementById("form_event:form_botcheck").value;
+			              var latx =document.getElementById("form_event:form_botcheck1").value;
+			              
+						function initialize() {
+							  var latLng = new google.maps.LatLng(lngx, latx);
+							  var map = new google.maps.Map(document.getElementById('map'), {
+							    zoom: 6,
+							    center: latLng,
+							    mapTypeId: google.maps.MapTypeId.ROADMAP
+							  });
+
+
+							  var input = document.getElementById('form_event:form_subject');
+						        var searchBox = new google.maps.places.SearchBox(input);
+
+						     // Bias the SearchBox results towards current map's viewport.
+						        map.addListener('bounds_changed', function() {
+						          searchBox.setBounds(map.getBounds());
+						        });
+
+						      
+						        // Listen for the event fired when the user selects a prediction and retrieve
+						        // more details for that place.
+						        searchBox.addListener('places_changed', function() {
+						          var places = searchBox.getPlaces();
+
+						          if (places.length == 0) {
+						            return;
+						          }
+						       // For each place, get the icon, name and location.
+						          var bounds = new google.maps.LatLngBounds();
+						          places.forEach(function(place) {
+						            if (!place.geometry) {
+						              console.log("Returned place contains no geometry");
+						              return;
+						            }
+						            var icon = {
+						              url: place.icon,
+						              size: new google.maps.Size(71, 71),
+						              origin: new google.maps.Point(0, 0),
+						              anchor: new google.maps.Point(17, 34),
+						              scaledSize: new google.maps.Size(25, 25)
+						            };
+
+						            // Create a marker for each place.
+						            markers.push(new google.maps.Marker({
+						              map: map,
+						              icon: icon,
+						              title: place.name,
+						              position: place.geometry.location
+						            }));
+
+						            if (place.geometry.viewport) {
+						              // Only geocodes have viewport.
+						              bounds.union(place.geometry.viewport);
+						            } else {
+						              bounds.extend(place.geometry.location);
+						            }
+						            
+							 		 document.getElementById('form_event:form_botcheck').value = place.geometry.location.lat();
+							 		 document.getElementById('form_event:form_botcheck1').value = place.geometry.location.lng();
+						          });
+
+
+						          map.fitBounds(bounds);
+							
+						        });
+						      
+																		        
+						
+
+							  
+							   var marker = new google.maps.Marker({
+					                  position: latLng,
+					                  map: map
+					                });
+					                markers.push(marker);
+							  google.maps.event.addListener(map, 'click', function(event) {
+							  
+							  addMarker(event.latLng, map);
+							  });
+
+
+				             
+						}
+				
+						function addMarker(location, map) {
+							  for (var i = 0; i &lt; markers.length; i++) {
+					             markers[i].setMap(null);
+					          }
+							  var marker = new google.maps.Marker({
+							    position: location,
+							    map: map
+							  });
+// 							  var input = document.getElementById('form_event:form_subject');
+// 						        var searchBox = new google.maps.places.SearchBox(input);
+// 						        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+							  
+					
+							  var latitud=marker.getPosition().lat();
+							  var lng=marker.getPosition().lng();
+					
+					 		  document.getElementById('form_event:form_botcheck').value = latitud;
+					 		 document.getElementById('form_event:form_botcheck1').value = lng;
+							  
+							  markers.push(marker);
+						  
+						}
+			
+			        </script>
+
+			
+			
+			
+			
+		<script async="async" defer="defer"
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVMR3Aj2yj28EEo67n-MrNJWW76yn72rE&amp;libraries=places&amp;callback=initialize">
+					    </script>
+					</div>
+				</div>
+			</div>
+
+
+	</section>
+
+	</ui:define>
+</ui:composition>

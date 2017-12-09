@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      dir="ltr" lang="en">
+
+
+<h:head>
+
+
+<!-- Meta Tags -->
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="ngopress - Nonprofit, Crowdfunding &amp; Charity HTML5 Template" />
+<meta name="keywords" content="charity,crowdfunding,nonprofit,orphan,Poor,funding,fundrising,ngo,children" />
+<meta name="author" content="ThemeMascot" />
+
+<!-- Page Title -->
+<title>Volunteering</title>
+
+<!-- Favicon and Touch Icons -->
+<link href="#{request.contextPath}/resources/images/favicon.png" rel="shortcut icon" type="image/png" />
+<link href="#{request.contextPath}/resources/images/apple-touch-icon.png" rel="apple-touch-icon" />
+<link href="#{request.contextPath}/resources/images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+<link href="#{request.contextPath}/resources/images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+<link href="#{request.contextPath}/resources/images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+
+<!-- Stylesheet -->
+<link href="#{request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="#{request.contextPath}/resources/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="#{request.contextPath}/resources/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="#{request.contextPath}/resources/css/css-plugin-collections.css" rel="stylesheet"/>
+<!-- CSS | menuzord megamenu skins -->
+<link id="menuzord-menu-skins" href="#{request.contextPath}/resources/css/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
+<!-- CSS | Main style file -->
+<link href="#{request.contextPath}/resources/css/style-main.css" rel="stylesheet" type="text/css" />
+<!-- CSS | Preloader Styles -->
+<link href="#{request.contextPath}/resources/css/preloader.css" rel="stylesheet" type="text/css" />
+<!-- CSS | Custom Margin Padding Collection -->
+<link href="#{request.contextPath}/resources/css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css" />
+<!-- CSS | Responsive media queries -->
+<link href="#{request.contextPath}/resources/css/responsive.css" rel="stylesheet" type="text/css" />
+<!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+
+<!-- CSS | Theme Color -->
+<link href="#{request.contextPath}/resources/css/colors/theme-skin-blue.css" rel="stylesheet" type="text/css" />
+
+<!-- external javascripts -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+ 
+<script src="#{request.contextPath}/resources/js/jquery-2.2.4.min.js"></script>
+<script src="#{request.contextPath}/resources/js/jquery-ui.min.js"></script>
+<script src="#{request.contextPath}/resources/js/bootstrap.min.js"></script>
+<!-- JS | jquery plugin collection for this theme -->
+<script src="#{request.contextPath}/resources/js/jquery-plugin-collection.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</h:head>
+<h:body class="">
+<div id="wrapper" class="clearfix">
+  <!-- preloader -->
+  <div id="preloader">
+    <div id="spinner">
+      <img class="floating" src="images/preloaders/13.png" alt="" />
+      <h5 class="line-height-50 font-18 ml-15">Loading...</h5>
+    </div>
+    <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
+  </div>
+  
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="header-top sm-text-center bg-theme-colored">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <nav>
+              <ul class="list-inline sm-text-center text-left flip mt-5">
+                <li> <a class="text-white" href="#">FAQ</a> </li>
+                <li class="text-white">|</li>
+                <li> <a class="text-white" href="#">Help Desk</a> </li>
+                <li class="text-white">|</li>
+                <li> <a class="text-white" href="#">Support</a> </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6">
+            <div class="widget m-0 mt-5 no-border">
+              <ul class="list-inline text-right sm-text-center">
+                <li class="pl-10 pr-10 mb-0 pb-0">
+                  <div class="header-widget text-white"><i class="fa fa-phone"></i> 58-690-251 </div>
+                </li>
+                <li class="pl-10 pr-10 mb-0 pb-0">
+                  <div class="header-widget text-white"><i class="fa fa-envelope-o"></i> voulunteering@esprit.tn </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 text-right flip sm-text-center">
+            <div class="widget m-0">
+              <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm">
+                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li class="mb-0 pb-0"><a href="#"><i class="fa fa-linkedin text-white"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <div class="header-nav-wrapper navbar-scrolltofixed bg-lighter">
+        <div class="container">
+          <nav id="menuzord-right" class="menuzord default no-bg"> <a class="menuzord-brand pull-left flip" href="index-mp-layout1.html"><img src="images/logo-wide.png" alt="" /></a>
+            <ul class="menuzord-menu">
+              <li class="active"><a href="#home">Home</a>
+               
+                 
+              </li>
+             
+              <li><a href="#">events</a>
+                <ul class="dropdown">
+                  <li><a href="page-event-list.html">Event List</a></li>
+                  <li><a href="page-event-grid-3column.html">Event 3column</a></li>
+                  <li><a href="page-event-grid-4column.html">Event 4column</a></li>
+                  <li><a href="page-single-event.html">Single Event</a></li>
+                  <li><a href="page-event-calendar.html">Event Calendar</a></li>
+                </ul>
+              </li>
+             
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Start main-content -->
+  <div class="main-content">
+		<ui:insert name="pageContent" />
+
+    
+
+  </div>
+  <!-- end main-content -->
+  
+  <!-- Footer -->
+  <footer id="footer" class="footer" data-bg-img="images/footer-bg.png" data-bg-color="#25272e">
+    <div class="container pt-70 pb-40">
+      <div class="row mt-10">
+        <div class="col-md-5">
+          <div class="widget dark">
+            <ul class="list-inline mt-5">
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored mr-5"></i> <a class="text-gray" href="#">58-690-251</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored mr-5"></i> <a class="text-gray" href="#">voulunteering@esprit.tn</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-colored mr-5"></i> <a class="text-gray" href="#">www.volunteering.tn</a> </li>
+            </ul>
+            <!-- Mailchimp Subscription Form Validation-->
+           
+            <!-- Mailchimp Subscription Form Ends Here -->
+          </div>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+          <div class="widget dark">
+            <h5 class="widget-title mb-10">Call Us Now</h5>
+            <div class="text-gray">
+              +216 22 134 678 <br />
+              +216 53 124 678
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title mb-10">Connect With Us</h5>
+            <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-skype"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom bg-black-333">
+      <div class="container pt-15 pb-10">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="font-11 text-black-777 m-0">Copyright &amp;copy;2016 ThemeMascot. All Rights Reserved</p>
+          </div>
+          <div class="col-md-6 text-right">
+            <div class="widget no-border m-0">
+              <ul class="list-inline sm-text-center mt-5 font-12">
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+                <li>|</li>
+                <li>
+                  <a href="#">Help Desk</a>
+                </li>
+                <li>|</li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- end wrapper -->
+
+<!-- Footer Scripts -->
+<!-- JS | Custom script for all pages -->
+<script src="#{request.contextPath}/resources/js/custom.js"></script>
+
+</h:body>
+
+<!-- Mirrored from kodesolution.com/demo/wxyz/y/ngopress/v2.0/demo/page-contact-style1.html by HTTrack Website Copier/3.x [XR&amp;CO'2014], Sun, 22 Oct 2017 23:42:46 GMT -->
+</html>
