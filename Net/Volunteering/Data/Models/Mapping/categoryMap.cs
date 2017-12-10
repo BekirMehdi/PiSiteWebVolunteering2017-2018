@@ -11,9 +11,6 @@ namespace Data.Models.Mapping
             this.HasKey(t => t.CategoryId);
 
             // Properties
-            this.Property(t => t.CategoryId)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
             this.Property(t => t.Name)
                 .HasMaxLength(255);
 

@@ -1,64 +1,66 @@
-﻿@model IEnumerable<Data.Models.product>
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Data.Models.product>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_mytemplate.cshtml";
 }
+<div class="container">
+    <div class="col-md-12 mt-40">
+        <hr>
+        <h4 class="title">List product</h4>
 
-<h2>Index</h2>
+        <div data-example-id="striped-table" class="bs-example">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DateProd)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoryId)
-        </th>
-        <th></th>
-    </tr>
+                        <th> date production</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">  @Html.DisplayFor(modelItem => item.ProductPk)</th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateProd)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CategoryId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProductPk }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProductPk }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProductPk })
-        </td>
-    </tr>
-}
+                            <td>@Html.DisplayFor(modelItem => item.DateProd)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                            <td> @Html.DisplayFor(modelItem => item.Quantity)</td>
+                            <td> @Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ProductPk }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ProductPk }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ProductPk })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <nav>
+            <ul class="pagination theme-colored mt-0">
+                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
-</table>
+
+
+                @Html.PagedListPager(Model, page => Url.Action("Index",
+
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+            </ul>
+        </nav>
+
+    </div>
+</div>

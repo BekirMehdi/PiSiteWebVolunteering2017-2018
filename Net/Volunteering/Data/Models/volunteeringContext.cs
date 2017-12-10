@@ -24,6 +24,14 @@ namespace Data.Models
         public DbSet<sponsor> sponsors { get; set; }
         public DbSet<t_todo> t_todo { get; set; }
         public DbSet<user> users { get; set; }
+        public DbSet<volunteering_category> volunteering_category { get; set; }
+        public DbSet<volunteering_course> volunteering_course { get; set; }
+        public DbSet<volunteering_evenement> volunteering_evenement { get; set; }
+        public DbSet<volunteering_news> volunteering_news { get; set; }
+        public DbSet<volunteering_product> volunteering_product { get; set; }
+        public DbSet<volunteering_sponsor> volunteering_sponsor { get; set; }
+        public DbSet<volunteering_t_todo> volunteering_t_todo { get; set; }
+        public DbSet<volunteering_user> volunteering_user { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -35,6 +43,14 @@ namespace Data.Models
             modelBuilder.Configurations.Add(new sponsorMap());
             modelBuilder.Configurations.Add(new t_todoMap());
             modelBuilder.Configurations.Add(new userMap());
+            modelBuilder.Configurations.Add(new volunteering_categoryMap());
+            modelBuilder.Configurations.Add(new volunteering_courseMap());
+            modelBuilder.Configurations.Add(new volunteering_evenementMap());
+            modelBuilder.Configurations.Add(new volunteering_newsMap());
+            modelBuilder.Configurations.Add(new volunteering_productMap());
+            modelBuilder.Configurations.Add(new volunteering_sponsorMap());
+            modelBuilder.Configurations.Add(new volunteering_t_todoMap());
+            modelBuilder.Configurations.Add(new volunteering_userMap());
         }
     }
 }

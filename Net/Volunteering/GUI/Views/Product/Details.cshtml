@@ -1,0 +1,183 @@
+﻿@model dynamic
+    @using Data.Models
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+<section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="@Url.Content("~/Content/mytemplate/")images/bg/bg1.jpg">
+    <div class="container pt-90 pb-50">
+        <!-- Section Content -->
+        <div class="section-content pt-100">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="title text-white">Product Details</h3>
+                    <ul class="list-inline text-white">
+                        <li>@Html.ActionLink("Home", "Index") /</li>
+                        <li><span class="text-gray">Product Details</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<p>
+</p>
+
+
+<section>
+    <div style="padding-left: 67px;" class="container">
+        <div class="section-content">
+
+            <div class="row">
+@foreach (product p in Model.product)
+{
+                <div class="product">
+                    <div class="col-md-5">
+                        <div class="product-image">
+                            <div class="zoom-gallery">
+                                <a href="images/products/lg1.jpg" title="Title Here 1"><img style="width:85%" src="@Url.Content("~/Content/"+@p.Image)" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="product-summary">
+                            <h2 class="product-title">@p.Name</h2>
+                            <div class="product_review">
+                                <ul class="review_text list-inline">
+                                    <li>
+                                        <div title="Rated 4.50 out of 5" class="star-rating"><span style="width: 90%;">4.50</span></div>
+                                    </li>
+                                    <li><a href="#"><span>2</span>Reviews</a></li>
+                                    <li><a href="#">Add reviews</a></li>
+                                </ul>
+                            </div>
+                            <div class="price"> <del><span class="amount">$165.00</span></del> <ins><span class="amount">$  @p.Price</span></ins> </div>
+                            <div class="short-description">
+                                <p>  @p.Description.</p>
+                            </div>
+                            <div class="tags"><strong>Date de production:</strong>@p.DateProd</div>
+                            @foreach (category c in Model.category)
+                            {
+                            <div class="category"><strong>Category:</strong> <a href="#">@c.Name</a></div>
+                            }
+                            <div class="tags"><strong>Quantity:</strong> <a href="#">@p.Quantity</a></div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="horizontal-tab product-tab">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
+                                <li><a href="#tab2" data-toggle="tab">Additional Information</a></li>
+                                <li><a href="#tab3" data-toggle="tab">Reviews</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab1">
+                                    <h3>Product Description</h3>
+                                    <p>@p.Description.</p>
+                                </div>
+                                <div class="tab-pane fade" id="tab2">
+                                    <table class="table table-striped">
+                                        <tbody>
+                                            <tr>
+                                                <th>Brand</th>
+                                                <td><p>Envato</p></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Color</th>
+                                                <td><p>Brown</p></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Size</th>
+                                                <td><p>Large, Medium</p></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Weight</th>
+                                                <td>27 kg</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Dimensions</th>
+                                                <td>16 x 22 x 123 cm</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="tab3">
+                                    <div class="reviews">
+                                        <ol class="commentlist">
+                                            <li class="comment">
+                                                <div class="media">
+                                                    <a href="#" class="media-left"><img class="img-circle" alt="" src="https://placehold.it/75x75" width="75"></a>
+                                                    <div class="media-body">
+                                                        <ul class="review_text list-inline">
+                                                            <li>
+                                                                <div title="Rated 5.00 out of 5" class="star-rating"><span style="width: 100%;">5.00</span></div>
+                                                            </li>
+                                                            <li>
+                                                                <h5 class="media-heading meta"><span class="author">Tom Joe</span> – Mar 15, 2015:</h5>
+                                                            </li>
+                                                        </ul>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat purus tempor sem molestie, sed blandit lacus posuere. Lorem ipsum dolor sit amet.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="comment">
+                                                <div class="media">
+                                                    <a href="#" class="media-left"><img class="img-circle" alt="" src="https://placehold.it/75x75" width="75"></a>
+                                                    <div class="media-body">
+                                                        <ul class="review_text list-inline">
+                                                            <li>
+                                                                <div title="Rated 4.00 out of 5" class="star-rating"><span style="width: 80%;">4.00</span></div>
+                                                            </li>
+                                                            <li>
+                                                                <h5 class="media-heading meta"><span class="author">Mark Doe</span> – Jan 23, 2015:</h5>
+                                                            </li>
+                                                        </ul>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat purus tempor sem molestie, sed blandit lacus posuere. Lorem ipsum dolor sit amet.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+}
+                <div class="col-md-12 mt-30">
+                    <h3 class="line-bottom">Related Products</h3>
+                    <div class="row multi-row-clearfix">
+                        <div class="products related">
+                          
+@foreach (product ps in Model.products)
+{
+                            <div class="col-sm-6 col-md-3 col-lg-3 mb-30">
+                                <div class="product pb-0">
+                                    <span class="tag-sale">Sale!</span>
+                                    <div class="product-thumb">
+                                        <img alt="" style="height: 250px;" src="@Url.Content("~/Content/"+@ps.Image)" class="img-responsive img-fullwidth">
+                                        <div class="overlay">
+                                            <div class="btn-add-to-cart-wrapper">
+                                                <a class="btn btn-theme-colored btn-sm btn-flat pl-20 pr-20 btn-add-to-cart text-uppercase font-weight-700" href="#">Add To Cart</a>
+                                            </div>
+                                            <div class="btn-product-view-details">
+                                                <a class="btn btn-default btn-theme-colored btn-sm btn-flat pl-20 pr-20 btn-add-to-cart text-uppercase font-weight-700" href="#">View detail</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-details text-center bg-lighter pt-15 pb-10">
+                                        <a href="#"><h5 class="product-title mt-0">@ps.Name</h5></a>
+                                        <div class="star-rating" title="Rated 3.50 out of 5"><span style="width: 60%;">3.50</span></div>
+                                        <div class="price"><del><span class="amount">$70.00</span></del><ins><span class="amount">$@ps.Price</span></ins></div>
+                                    </div>
+                                </div>
+                            </div>
+}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -18,6 +18,11 @@ namespace GUI
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+               name: "Product",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Product", action = "ProductByCategory", categoryId = UrlParameter.Optional });
+
         }
     }
 }

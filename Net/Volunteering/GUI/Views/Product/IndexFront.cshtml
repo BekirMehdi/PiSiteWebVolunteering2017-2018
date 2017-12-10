@@ -1,0 +1,159 @@
+﻿@model dynamic
+@using PagedList.Mvc
+@using Data.Models
+@{
+    ViewBag.Title = "IndexFront";
+    Layout = "~/Views/Shared/_mytemplate.cshtml";
+}
+<section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="@Url.Content("~/Content/mytemplate/")images/bg/bg1.jpg" style="background-image: url(&quot;images/bg/bg1.jpg&quot;); background-position: 50% -143px;">
+    <div class="container pt-90 pb-50">
+        <!-- Section Content -->
+        <div class="section-content pt-100">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="title text-white">Shop Sidebar</h3>
+                    <ul class="list-inline text-white">
+                        <li>Home /</li>
+                        <li><span class="text-gray">Shop Sidebar</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="">
+    <div class="container mt-30 mb-30 p-30">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-sm-12 col-md-9">
+                    <div class="row multi-row-clearfix">
+                        <div class="products">
+                        
+                            @foreach (product p in Model.products)
+                            {
+                                <div class="col-sm-6 col-md-4 col-lg-4 mb-30">
+                                    <div class="product pb-0">
+                                        <span class="tag-sale">Sale!</span>
+                                        <div class="product-thumb">
+                                            <img alt="" style="height:280px;" src="@Url.Content("~/Content/"+@p.Image)" class="img-responsive img-fullwidth">
+
+                                            <div class="overlay">
+                                                <div class="btn-add-to-cart-wrapper">
+                                                    <a class="btn btn-theme-colored btn-sm btn-flat pl-20 pr-20 btn-add-to-cart text-uppercase font-weight-700" href="#">Add To Cart</a>
+                                                </div>
+                                                <div class="btn-product-view-details">
+                                                    <a class="btn btn-default btn-theme-colored btn-sm btn-flat pl-20 pr-20 btn-add-to-cart text-uppercase font-weight-700" href="#">View detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-details text-center bg-lighter pt-15 pb-10">
+                                            <a href="#"><h5 class="product-title mt-0">@p.Name</h5></a>
+                                            <div class="star-rating" title="Rated 3.50 out of 5"><span style="width: 67%;">3.50</span></div>
+                                            <div class="price"><del><span class="amount">$110.00</span></del><ins><span class="amount">@p.Price</span></ins></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="col-md-12">
+                            <nav>
+                                <ul class="pagination theme-colored mt-0">
+                                    <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a> </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li> <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a> </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="col-sm-12 col-md-3">
+                <div class="sidebar sidebar-right mt-sm-30">
+                    <div class="widget">
+                        <h5 class="widget-title line-bottom">Search box</h5>
+                        <div style="display: block; margin-top: 0em;" class="search-form">
+                            
+                                <div class="input-group">
+                                    @using (Html.BeginForm())
+                                    {
+                                        <div>
+                                            <input name="search" type="text" placeholder="Click to Search" class="form-control search-input">
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    }
+
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="widget-title line-bottom">Categories</h5>
+                        <div class="categories">
+                            <ul class="list list-border angle-double-right">
+                                @foreach (category c in Model.categories)
+                                {
+                                   
+                                    <li>
+                                        @Html.ActionLink(@c.Name, "ProductByCategory", new { categoryId = @c.CategoryId })
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="widget-title line-bottom">Top Sellers</h5>
+                        <div class="top-sellers">
+                            <article class="post media-post clearfix pb-0 mb-10">
+                                <a class="post-thumb" href="#"><img src="images/products/sm1.jpg" alt=""></a>
+                                <div class="post-right">
+                                    <h5 class="post-title font-weight-600 mt-0 mb-0"><a href="#">Saddles</a></h5>
+                                    <div class="product-detail">
+                                        <div class="price mb-10"><ins><span class="amount">$480.00</span></ins></div>
+                                        <div title="Rated 3.50 out of 5" class="star-rating ml-0"><span style="width: 60%;">3.50</span></div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="post media-post clearfix pb-0 mb-10">
+                                <a class="post-thumb" href="#"><img src="images/products/sm2.jpg" alt=""></a>
+                                <div class="post-right">
+                                    <h5 class="post-title font-weight-600 mt-0 mb-0"><a href="#">Helmets</a></h5>
+                                    <div class="product-detail">
+                                        <div class="price mb-10"><ins><span class="amount">$480.00</span></ins></div>
+                                        <div title="Rated 3.50 out of 5" class="star-rating ml-0"><span style="width: 60%;">3.50</span></div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="post media-post clearfix pb-0 mb-10">
+                                <a class="post-thumb" href="#"><img src="images/products/sm3.jpg" alt=""></a>
+                                <div class="post-right">
+                                    <h5 class="post-title font-weight-600 mt-0 mb-0"><a href="#">Vests</a></h5>
+                                    <div class="product-detail">
+                                        <div class="price mb-10"><ins><span class="amount">$480.00</span></ins></div>
+                                        <div title="Rated 3.50 out of 5" class="star-rating ml-0"><span style="width: 60%;">3.50</span></div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h5 class="widget-title line-bottom">Photos from Flickr</h5>
+                        <div id="flickr-feed" class="clearfix">
+                            <!-- Flickr Link -->
+                            <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=52617155@N08">
+                            </script><!-- DEVELOPER WARNING: The Flickr badge code is likely to be deprecated, and we recommend changing to a new method to embed photo as soon as possible.  See https://www.flickr.com/api for information on how to access Flickr data. Thanks. --><div class="flickr_badge_image" id="flickr_badge_image1"><a href="http://www.flickr.com/photos/we-are-envato/15647274066/"><img src="http://farm4.staticflickr.com/3940/15647274066_2ee48c3fe9_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image2"><a href="http://www.flickr.com/photos/we-are-envato/15485436268/"><img src="http://farm4.staticflickr.com/3945/15485436268_846ccca178_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image3"><a href="http://www.flickr.com/photos/we-are-envato/15668911091/"><img src="http://farm4.staticflickr.com/3956/15668911091_4ef20118b5_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image4"><a href="http://www.flickr.com/photos/we-are-envato/15484954949/"><img src="http://farm6.staticflickr.com/5605/15484954949_a4e97a9dc5_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image5"><a href="http://www.flickr.com/photos/we-are-envato/15647103116/"><img src="http://farm8.staticflickr.com/7490/15647103116_1e4b9033f0_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image6"><a href="http://www.flickr.com/photos/we-are-envato/15668909741/"><img src="http://farm6.staticflickr.com/5599/15668909741_eaf3db4054_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image7"><a href="http://www.flickr.com/photos/we-are-envato/15670834825/"><img src="http://farm8.staticflickr.com/7544/15670834825_5f55bb7e4e_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image8"><a href="http://www.flickr.com/photos/we-are-envato/15485435298/"><img src="http://farm4.staticflickr.com/3946/15485435298_7848e85e0a_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><div class="flickr_badge_image" id="flickr_badge_image9"><a href="http://www.flickr.com/photos/we-are-envato/15647100406/"><img src="http://farm4.staticflickr.com/3937/15647100406_34599445cf_s.jpg" alt="Une photo sur Flickr" title="Halloween 2014 at Envato in Melbourne" height="75" width="75"></a></div><span style="position:absolute;left:-999em;top:-999em;visibility:hidden" class="flickr_badge_beacon"><img src="http://geo.yahoo.com/p?s=792600102&amp;t=534ee6eccaecf614bde3d20ba3e2f7f3&amp;fl_ev=0&amp;lang=fr&amp;intl=xa" width="0" height="0" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </div>
+    </div>
+    </div>
+</section>

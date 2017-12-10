@@ -15,15 +15,14 @@ namespace GUI.Controllers
         // GET: Category
         public ActionResult Index()
         {
-      
-      
             return View(cs.GetAll());
         }
 
         // GET: Category/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            category c = cs.GetById(id);
+            return View(c);
         }
 
         // GET: Category/Create
@@ -52,16 +51,25 @@ namespace GUI.Controllers
         // GET: Category/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(cs.Get(e => e.CategoryId == id));
         }
 
         // POST: Category/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, category cat)
         {
+
             try
             {
                 // TODO: Add update logic here
+
+                category c = new category();
+                c = cs.GetById(id);
+                c.CategoryId = cat.CategoryId;
+                c.Name = cat.Name;
+              
+                cs.Update(c);
+                cs.Commit();
 
                 return RedirectToAction("Index");
             }
@@ -74,17 +82,20 @@ namespace GUI.Controllers
         // GET: Category/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            category c = cs.GetById(id);
+            return View(c);
         }
 
         // POST: Category/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, category c)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                c = cs.GetById(id);
+                cs.Delete(c);
+                cs.Commit();
                 return RedirectToAction("Index");
             }
             catch

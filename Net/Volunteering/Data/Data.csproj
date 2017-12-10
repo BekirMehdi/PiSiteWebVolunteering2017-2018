@@ -103,8 +103,24 @@
     <Compile Include="Models\Mapping\sponsorMap.cs" />
     <Compile Include="Models\Mapping\t_todoMap.cs" />
     <Compile Include="Models\Mapping\userMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_categoryMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_courseMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_evenementMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_newsMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_productMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_sponsorMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_t_todoMap.cs" />
+    <Compile Include="Models\Mapping\volunteering_userMap.cs" />
     <Compile Include="Models\t_todo.cs" />
     <Compile Include="Models\volunteeringContext.cs" />
+    <Compile Include="Models\volunteering_category.cs" />
+    <Compile Include="Models\volunteering_course.cs" />
+    <Compile Include="Models\volunteering_evenement.cs" />
+    <Compile Include="Models\volunteering_news.cs" />
+    <Compile Include="Models\volunteering_product.cs" />
+    <Compile Include="Models\volunteering_sponsor.cs" />
+    <Compile Include="Models\volunteering_t_todo.cs" />
+    <Compile Include="Models\volunteering_user.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

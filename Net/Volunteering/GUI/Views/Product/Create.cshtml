@@ -7,15 +7,22 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post, new { encType = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>product</h4>
         <hr />
         
-
+        <div class="form-group">
+            @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("Imag", null, new { Type = "File" })
+                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+            </div>
+        </div>
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -67,3 +74,4 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+

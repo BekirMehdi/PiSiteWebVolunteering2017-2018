@@ -11,13 +11,13 @@ namespace Data.Models.Mapping
             this.HasKey(t => t.ProductPk);
 
             // Properties
-            this.Property(t => t.ProductPk)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
             this.Property(t => t.Description)
                 .HasMaxLength(255);
 
             this.Property(t => t.Name)
+                .HasMaxLength(255);
+
+            this.Property(t => t.Image)
                 .HasMaxLength(255);
 
             // Table & Column Mappings
@@ -29,6 +29,7 @@ namespace Data.Models.Mapping
             this.Property(t => t.Price).HasColumnName("Price");
             this.Property(t => t.Quantity).HasColumnName("Quantity");
             this.Property(t => t.CategoryId).HasColumnName("CategoryId");
+            this.Property(t => t.Image).HasColumnName("Image");
         }
     }
 }

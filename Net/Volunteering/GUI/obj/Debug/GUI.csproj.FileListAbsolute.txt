@@ -95,3 +95,7 @@ C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\bin\Micr
 C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\obj\Debug\GUI.dll
 C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\obj\Debug\GUI.pdb
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\bin\PagedList.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\bin\PagedList.xml
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\bin\PagedList.Mvc.dll
+C:\Users\DELL-PC\documents\visual studio 2015\Projects\Volunteering\GUI\bin\PagedList.Mvc.xml

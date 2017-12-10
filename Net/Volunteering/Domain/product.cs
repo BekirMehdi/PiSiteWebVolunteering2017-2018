@@ -31,5 +31,6 @@ namespace Data.Models
         [ForeignKey("CategoryId")]
         public virtual category Cat { get; set; }
 
+        public string Image { get; set; }
     }
 }
