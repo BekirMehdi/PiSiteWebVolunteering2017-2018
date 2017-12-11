@@ -22,14 +22,17 @@ namespace GUI.Controllers
 
         // GET: ProductCtegory
         public ActionResult IndexFront()
-        {  
-            int pageSize = 3;
+        {
+            List<GroupModel> listG = new List<GroupModel>();
+            listG=ps.getQuantiteProdByCat();
+            int pageSize = 9;
             int pageNumber = 1;
             dynamic mymodel = new ExpandoObject();
             ViewBag.Message = "Welcome to my demo!";
             mymodel.products = ps.GetAll().ToPagedList(pageNumber, pageSize);
             mymodel.categories = cs.GetAll();
-           
+            mymodel.groupModels = listG;
+
             return View(mymodel);
         }
         public ActionResult ProductByCategory(int categoryId)

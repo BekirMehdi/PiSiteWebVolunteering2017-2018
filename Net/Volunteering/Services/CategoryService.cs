@@ -12,11 +12,12 @@ namespace Services
     public class CategoryService : Service<category>
     {
         private static DatabaseFactory dbf = new DatabaseFactory();
-        private static UnitOfWork uof = new UnitOfWork(dbf);
-        public CategoryService() : base(uof)
+        private static UnitOfWork uf = new UnitOfWork(dbf);
+        public CategoryService() : base(uf)
         {
 
         }
+       
     
     }
 }

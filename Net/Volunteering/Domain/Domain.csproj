@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +46,7 @@
     <Compile Include="category.cs" />
     <Compile Include="course.cs" />
     <Compile Include="evenement.cs" />
+    <Compile Include="GroupModel.cs" />
     <Compile Include="news.cs" />
     <Compile Include="product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
